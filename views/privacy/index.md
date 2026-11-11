@@ -14,12 +14,16 @@ This page explains what the Deaftly app keeps, what this website collects, why, 
 
 Deaftly keeps what you put into it on your phone. We, the people who make Deaftly, don't receive any of it.
 
+<div class="table-scroll" role="region" aria-label="What the app keeps" tabindex="0">
+
 | What | Why | How long |
 |---|---|---|
 | Your templates, and what you type into them. This can include names, health details or routines. | So you can use them again | Until you delete them or the app |
 | Your name, colour and other settings | To set up chats and Show the way you like | Until you change them or delete the app |
 | Chat messages | To hold the conversation | Only while the chat is open. They're deleted when you end the chat. |
 | Camera pictures and the text read from them | To add text to a message | Pictures are never stored. Text is kept only if you add it to a template. |
+
+</div>
 
 ### Android backup
 

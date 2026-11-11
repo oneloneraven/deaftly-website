@@ -1,0 +1,26 @@
+name: Redeploy on app release
+
+# A Deaftly app release changes the download button, What's new and the help,
+# so the site's current release is rebuilt and deployed again.
+on:
+  repository_dispatch:
+    types: [app-released]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  redeploy:
+    runs-on: ubuntu-26.04
+    permissions:
+      actions: write
+    steps:
+      - name: Run Deploy for the site's latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TAG=$(gh release view --repo "$GITHUB_REPOSITORY" --json tagName --jq .tagName)
+          echo "Redeploying $TAG"
+          gh workflow run deploy.yml --repo "$GITHUB_REPOSITORY" --ref "$TAG"
