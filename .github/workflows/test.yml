@@ -47,6 +47,8 @@ jobs:
           persist-credentials: false
       - uses: $/.github/actions/setup-node-pnpm
       - run: pnpm test:e2e
+        env:
+          DEAFTLY_RELEASES_FIXTURE: test/fixtures/releases.json
 
   e2e:
     if: ${{ !cancelled() }}
@@ -78,6 +80,8 @@ jobs:
       - uses: $/.github/actions/setup-node-pnpm
       - run: sudo safaridriver --enable
       - run: pnpm test:e2e
+        env:
+          DEAFTLY_RELEASES_FIXTURE: test/fixtures/releases.json
         env:
           E2E_BROWSERS: safari
 

@@ -20,7 +20,10 @@ jobs:
           ref: ${{ github.event.release.tag_name }}
           persist-credentials: false
       - uses: $/.github/actions/setup-node-pnpm
-      - run: pnpm build
+      - name: Build, reading the app's latest release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: pnpm build
       - name: Zip and attach the build
         env:
           GH_TOKEN: ${{ github.token }}
