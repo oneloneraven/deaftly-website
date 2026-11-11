@@ -1,0 +1,30 @@
+---
+layout: base.njk
+title: Help
+description: How to use Deaftly, from your first message to templates, Show, Face to face, Side by side and the camera.
+---
+<div class="wrap help">
+{% include "help-menu.njk" %}
+<div class="help__content">
+<h1>How can we help?</h1>
+<form class="help-search" role="search" action="/help/" method="get">
+<label for="help-q">Search help</label>
+<div class="help-search__row">
+<input id="help-q" name="q" type="search" autocomplete="off" placeholder="For example: change text size">
+<button class="button" type="submit">Search</button>
+</div>
+</form>
+<div id="help-results" class="help-results" aria-live="polite"></div>
+<ul class="topic-grid">
+{% for topic in help %}
+<li><a class="situation-card" href="{{ topic.url }}"><strong>{{ topic.title }}</strong></a></li>
+{% endfor %}
+</ul>
+<div class="panel help-contact">
+<h2>Still stuck, or found a bug?</h2>
+<p>Send us feedback or report a bug. Tell us your app version if you can.</p>
+<a class="button" href="/feedback/">Get in touch</a>
+</div>
+</div>
+</div>
+<script src="/scripts/help-search.js" defer></script>

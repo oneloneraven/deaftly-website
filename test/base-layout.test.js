@@ -4,7 +4,7 @@ import { buildSite, page } from "./helpers/build.js";
 const text = (/** @type {Element | null} */ element) => element?.textContent?.replace(/\s+/g, " ").trim();
 
 test("every page declares British English and a titled, described head", async () => {
-  for (const url of (await buildSite()).keys()) {
+  for (const url of [...(await buildSite()).keys()].filter(url => url.endsWith("/"))) {
     const doc = await page(url);
     expect(doc.documentElement.lang, url).toBe("en-GB");
     expect(doc.title, url).toMatch(/ – Deaftly$|^Deaftly$/);

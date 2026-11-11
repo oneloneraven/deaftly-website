@@ -1,0 +1,17 @@
+---
+layout: base.njk
+pagination:
+  data: help
+  size: 1
+  alias: topic
+permalink: "{{ topic.url }}"
+eleventyComputed:
+  title: "{{ topic.title }} – Help"
+  description: "Deaftly help: {{ topic.title }}."
+---
+<div class="wrap help">
+{% include "help-menu.njk" %}
+<article class="help__content prose">
+{{ topic.html | safe }}
+</article>
+</div>
