@@ -3,7 +3,17 @@ import { createRequire } from "node:module";
 import { browser, expect } from "@wdio/globals";
 
 const WCAG_22_AA = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"];
-const PAGES = ["/", "/download/", "/help/", "/help/templates/", "/tour/", "/situations/doctors/", "/whats-new/"];
+const PAGES = [
+  "/",
+  "/download/",
+  "/help/",
+  "/help/templates/",
+  "/tour/",
+  "/situations/doctors/",
+  "/whats-new/",
+  "/ethics/",
+  "/privacy/",
+];
 const axeSource = readFileSync(createRequire(import.meta.url).resolve("axe-core/axe.min.js"), "utf8");
 
 async function violations() {
