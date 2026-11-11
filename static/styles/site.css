@@ -989,3 +989,28 @@ code {
   margin-top: 3rem;
   background: var(--accent-soft);
 }
+
+/* What's new */
+
+.release {
+  padding-block: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.release__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.release__head h2 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.release__download {
+  display: inline-block;
+  padding-block: 0.5rem;
+  font-weight: 700;
+}
