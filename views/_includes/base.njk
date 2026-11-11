@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title == site.name %}{{ title }}{% else %}{{ title }} – {{ site.name }}{% endif %}</title>
+<meta name="description" content="{{ description }}">
+<meta name="color-scheme" content="light dark">
+<link rel="preload" href="/fonts/atkinson-hyperlegible-next.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles/site.css">
+</head>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
+<a class="skip-link" href="#main">Skip to content</a>
+{% include "site-header.njk" %}
+<main id="main">
+{{ content | safe }}
+</main>
+{% include "site-footer.njk" %}
+</body>
+</html>
