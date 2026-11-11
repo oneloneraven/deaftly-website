@@ -931,3 +931,42 @@ code {
 .help-contact h2 {
   font-size: 1.75rem;
 }
+
+/* Tour */
+
+.tour {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 8vw, 5rem);
+  padding-bottom: 3rem;
+}
+
+.tour-step {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+}
+
+.tour-step:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.tour-step img {
+  flex: 0 1 18rem;
+  min-width: 0;
+  border: 0.6rem solid #15151a;
+  border-radius: 2.25rem;
+  background: #15151a;
+}
+
+.tour-step > div {
+  flex: 1 1 22rem;
+  min-width: 0;
+  max-width: 34rem;
+}
+
+.tour-step p {
+  color: var(--ink-secondary);
+  font-size: 1.25rem;
+}
