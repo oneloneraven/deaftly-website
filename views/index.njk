@@ -3,6 +3,111 @@ layout: base.njk
 title: Talk with people who can hear, quickly and simply
 description: Deaftly helps deaf people talk with people who can hear. Show a message in big, clear text, use a ready-made template, or chat face to face on one phone.
 ---
-<section class="wrap">
+<section class="wrap hero">
+<div class="hero__intro">
 <h1>Talk with people who can hear, quickly and simply.</h1>
+<p class="lede">Four ways to get your message across, whatever the moment.</p>
+</div>
+<a class="button" href="/download/">Get Deaftly for Android</a>
+</section>
+
+<section class="wrap hero-panels" aria-label="What Deaftly does">
+<div class="hero-panel">
+<h2 class="eyebrow">Show</h2>
+<div class="hero-panel__grid">
+<a class="feature-tile" href="/tour/#type-and-show">
+<span class="mini mini--show" aria-hidden="true">Could you write that down, please?</span>
+<h3>Start typing</h3>
+<span>Type anything and show it full screen in big, clear text.</span>
+</a>
+<a class="feature-tile" href="/tour/#templates">
+<span class="mini mini--template" aria-hidden="true"><span>Hi, I have an appointment at <mark>10:30</mark> with <mark>Dr Shah</mark>.</span></span>
+<h3>Templates</h3>
+<span>Everyday messages, ready to go. Tap the parts that change.</span>
+</a>
+</div>
+</div>
+<div class="hero-panel">
+<h2 class="eyebrow">Chat</h2>
+<div class="hero-panel__grid">
+<a class="feature-tile" href="/tour/#face-to-face">
+<span class="mini mini--f2f" aria-hidden="true"><span class="mini--f2f__them">Where's the lift?</span><span class="mini--f2f__me">Where's the lift?</span></span>
+<h3>Face to face</h3>
+<span>They read along as you type, while you keep hold of your phone.</span>
+</a>
+<a class="feature-tile" href="/tour/#side-by-side">
+<span class="mini mini--chat" aria-hidden="true"><span class="bubble bubble--me">Which platform?</span><span class="bubble bubble--them">Platform 4, at <b>10:15</b></span></span>
+<h3>Side by side</h3>
+<span>Take turns on one phone, like a script in each person's colour.</span>
+</a>
+</div>
+</div>
+</section>
+
+<section class="band" id="features">
+<div class="wrap">
+<h2>“Can't I just type in my notes app?”</h2>
+<p class="lede">You can. A notes app is for writing things down, though, and Deaftly is for the conversation: the bit where someone's waiting, you're holding your phone up, and they don't know yet that you're deaf.</p>
+
+<div class="feature-grid">
+<article class="feature-card">
+<span class="mini mini--schemes" aria-hidden="true"><span>Aa</span><span>Aa</span><span>Aa</span></span>
+<h3>Type &amp; show</h3>
+<p>Type anything and show it full screen in big, clear text. Choose black on white, white on black or yellow on black. If they reply, carry on as a chat.</p>
+</article>
+<article class="feature-card">
+<span class="mini mini--template" aria-hidden="true"><span>Hi! I'm deaf. I'd like a ticket to <mark>Leeds</mark>, please.</span></span>
+<h3>Templates</h3>
+<p>Messages you use often, ready to go. Tap a highlighted word to change it: pick from a list, type it, or read it off a sign with the camera. Pin your favourites, sort them into categories or write your own.</p>
+</article>
+<article class="feature-card">
+<span class="mini mini--f2f" aria-hidden="true"><span class="mini--f2f__them">I'm collecting a prescription</span><span class="mini--f2f__me">I'm collecting a prescription</span></span>
+<h3>Face to face</h3>
+<p>Type to someone opposite you while keeping a secure grip on your phone. The keyboard faces you and your words face them, so they read along as you type instead of waiting for the whole message.</p>
+</article>
+<article class="feature-card">
+<span class="mini mini--chat" aria-hidden="true"><span class="bubble bubble--me">Which platform for Leeds?</span><span class="bubble bubble--them">Platform 4, at <b>10:15</b></span><span class="mini__prompt">Your turn – type your reply here</span></span>
+<h3>Side by side</h3>
+<p>A back-and-forth on one phone, laid out like a script in each person's colour. Clear prompts show the other person where to type. Flip the switch to change turns, and switch sides to match where you're each standing.</p>
+</article>
+</div>
+
+<div class="camera-block">
+<div class="mini mini--menu" aria-hidden="true">
+<span>Tomato soup …… 5.50</span>
+<span class="mini--menu__picked">Penne arrabbiata …… 11.00</span>
+<span>Garlic bread …… 4.00</span>
+<span class="mini--menu__add">Add to message</span>
+</div>
+<div>
+<h2>Read text with the camera</h2>
+<p>Point your camera at a menu, label, timetable or letter. Tap the lines you want, or drag across words, and add them to your message. You can freeze the picture to make it easier, and turn on the torch when it's dark.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="wrap section" id="situations">
+<h2>Wherever you need it</h2>
+<ul class="situation-grid">
+<li><a class="situation-card" href="/situations/doctors/"><strong>At the doctor's</strong><span>Check in and tell them how you'll communicate.</span></a></li>
+<li><a class="situation-card" href="/situations/ordering-food/"><strong>Ordering food</strong><span>Order straight off the menu with the camera.</span></a></li>
+<li><a class="situation-card" href="/situations/travel/"><strong>Travel</strong><span>Ask about platforms, delays and tickets.</span></a></li>
+<li><a class="situation-card" href="/situations/shops/"><strong>Shops and counters</strong><span>Quick questions without the back-and-forth.</span></a></li>
+</ul>
+</section>
+
+{% if quote.approved %}
+<section class="wrap section">
+<figure class="quote">
+<blockquote><p>{{ quote.text }}</p></blockquote>
+<figcaption>{{ quote.credit }}</figcaption>
+</figure>
+</section>
+{% endif %}
+
+<section class="wrap section cta">
+<h2>Try it next time you're out.</h2>
+<a class="button" href="/download/">Get Deaftly for Android</a>
+<p class="muted">Coming soon to Google Play and iPhone.</p>
 </section>
