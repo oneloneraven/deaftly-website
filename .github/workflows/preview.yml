@@ -40,7 +40,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           set -euo pipefail
-          OUTPUT=$(pnpm exec wrangler preview --env preview --name "pr-$PR_NUMBER" --json)
+          OUTPUT=$(pnpm exec wrangler preview --env preview --name "pr-$PR_NUMBER" --json) || { echo "$OUTPUT" >&2; echo "::error::wrangler preview failed."; exit 1; }
           URL=$(echo "$OUTPUT" | sed -n '/^{/,$p' | jq -r '.preview.urls[0] // empty')
           if [ -z "$URL" ]; then
             echo "$OUTPUT" >&2
