@@ -335,7 +335,7 @@ a:hover {
 }
 
 .split > * {
-  flex: 1 1 24rem;
+  flex: 1 1 min(24rem, 100%);
   min-width: 0;
 }
 
@@ -351,7 +351,7 @@ a:hover {
 }
 
 .hero__intro {
-  flex: 1 1 32rem;
+  flex: 1 1 min(32rem, 100%);
   min-width: 0;
 }
 
@@ -599,12 +599,12 @@ mark,
 }
 
 .camera-block > .mini {
-  flex: 0 1 20rem;
+  flex: 0 1 min(20rem, 100%);
   min-width: 0;
 }
 
 .camera-block > div:last-child {
-  flex: 1 1 22rem;
+  flex: 1 1 min(22rem, 100%);
   min-width: 0;
 }
 
@@ -835,7 +835,7 @@ code {
 }
 
 .help-menu {
-  flex: 1 1 15rem;
+  flex: 1 1 min(15rem, 100%);
   padding: 1.25rem;
   border-radius: 1.5rem;
   background: var(--surface);
@@ -866,7 +866,7 @@ code {
 }
 
 .help__content {
-  flex: 999 1 32rem;
+  flex: 999 1 min(32rem, 100%);
   min-width: 0;
 }
 
@@ -896,7 +896,7 @@ code {
 }
 
 .help-search input {
-  flex: 1 1 16rem;
+  flex: 1 1 min(16rem, 100%);
   min-width: 0;
   min-height: 3rem;
   padding: 0.75rem 1.25rem;
@@ -953,7 +953,7 @@ code {
 }
 
 .tour-step img {
-  flex: 0 1 18rem;
+  flex: 0 1 min(18rem, 100%);
   min-width: 0;
   border: 0.6rem solid #15151a;
   border-radius: 2.25rem;
@@ -961,7 +961,7 @@ code {
 }
 
 .tour-step > div {
-  flex: 1 1 22rem;
+  flex: 1 1 min(22rem, 100%);
   min-width: 0;
   max-width: 34rem;
 }
@@ -1077,4 +1077,74 @@ code {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+/* Reflow: nothing scrolls sideways at 320px, even with large text */
+
+h1,
+h2,
+h3,
+h4,
+.button,
+.situation-card,
+.feature-tile {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.button {
+  max-width: 100%;
+  text-align: center;
+}
+
+.prose table {
+  border-collapse: collapse;
+}
+
+.prose th,
+.prose td {
+  min-width: 9rem;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.mini > span,
+.mini--menu > span {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.mini--schemes span {
+  font-size: min(2rem, 9vw);
+}
+
+.help-menu,
+.help__content,
+.help-menu a {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+fieldset {
+  min-width: 0;
+}
+
+code {
+  overflow-wrap: anywhere;
+}
+
+main :is(p, li, dt, dd, label, legend) {
+  overflow-wrap: anywhere;
+}
+
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.table-scroll:focus-visible {
+  outline-offset: 2px;
 }
