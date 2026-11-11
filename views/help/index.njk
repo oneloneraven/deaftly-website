@@ -7,7 +7,7 @@ description: How to use Deaftly, from your first message to templates, Show, Fac
 {% include "help-menu.njk" %}
 <div class="help__content">
 <h1>How can we help?</h1>
-<form class="help-search" role="search" action="/help/" method="get">
+<form class="help-search" role="search" action="/help/" method="get" hidden>
 <label for="help-q">Search help</label>
 <div class="help-search__row">
 <input id="help-q" name="q" type="search" autocomplete="off" placeholder="For example: change text size">
@@ -27,4 +27,4 @@ description: How to use Deaftly, from your first message to templates, Show, Fac
 </div>
 </div>
 </div>
-<script src="/scripts/help-search.js" defer></script>
+<script src="{{ "/scripts/help-search.js" | asset }}" defer></script>

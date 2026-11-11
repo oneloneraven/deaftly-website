@@ -1,6 +1,29 @@
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
+
+/** @type {Map<string, string>} */
+const hashes = new Map();
+
+/**
+ * The path with a short hash of the file's contents, so long-lived caches never serve a stale copy.
+ * @param {string} path
+ */
+function assetUrl(path) {
+  if (!hashes.has(path))
+    hashes.set(
+      path,
+      createHash("sha256")
+        .update(readFileSync(`static${path}`))
+        .digest("hex")
+        .slice(0, 10),
+    );
+  return `${path}?v=${hashes.get(path)}`;
+}
+
 /** @param {import("@11ty/eleventy").UserConfig} config */
 export default function (config) {
   config.addPassthroughCopy({ static: "/" });
+  config.addFilter("asset", assetUrl);
   config.addFilter("appData", (/** @type {{ version: string, apkUrl: string, publishedAt: string }} */ release) =>
     JSON.stringify({
       "@context": "https://schema.org",

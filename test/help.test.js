@@ -44,7 +44,7 @@ test("the search box has a label and works from a search index", async () => {
   const doc = await page("/help/");
   const input = doc.querySelector("input[type=search]");
   expect(doc.querySelector(`label[for="${input?.id}"]`)).not.toBeNull();
-  expect(doc.querySelector('script[src="/scripts/help-search.js"]')).not.toBeNull();
+  expect(doc.querySelector('script[src^="/scripts/help-search.js"]')).not.toBeNull();
   const index = JSON.parse((await buildSite()).get("/help/index.json") ?? "[]");
   expect(index.map((/** @type {{ title: string }} */ entry) => entry.title)).toEqual(TOPICS);
 });

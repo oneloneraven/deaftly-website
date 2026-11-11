@@ -1,6 +1,6 @@
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { fetchLatestRelease } from "../../lib/github-release.js";
+import { latestReleaseForBuild } from "../../lib/github-release.js";
 import { fetchHelpFiles, helpPages } from "../../lib/help.js";
 
 const fixture = process.env.DEAFTLY_HELP_FIXTURE;
@@ -13,4 +13,4 @@ async function fromFixture() {
 }
 
 export default async () =>
-  helpPages(fixture ? await fromFixture() : await fetchHelpFiles((await fetchLatestRelease()).tag));
+  helpPages(fixture ? await fromFixture() : await fetchHelpFiles((await latestReleaseForBuild()).tag));

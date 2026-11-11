@@ -6,7 +6,7 @@ describe("feedback form", () => {
     await $("#message").setValue("Checking the form reaches the Worker");
     // Filling the honeypot makes the Worker answer as for a real post without creating an issue.
     await browser.execute(() => {
-      const trap = /** @type {HTMLInputElement} */ (document.querySelector("#website"));
+      const trap = /** @type {HTMLInputElement} */ (document.querySelector("#hpx"));
       trap.value = "e2e";
     });
     await $("button[type=submit]").click();
