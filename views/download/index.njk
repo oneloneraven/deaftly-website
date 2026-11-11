@@ -1,0 +1,75 @@
+---
+layout: base.njk
+title: Download Deaftly for Android
+description: Get Deaftly for Android 8 and newer. Download it directly, see what to expect, and follow the steps to install it.
+---
+<section class="wrap section section--tight">
+<h1>Get Deaftly</h1>
+<p class="lede">For Android 8 and newer. Choose how you'd like to install it.</p>
+</section>
+
+<section class="wrap install-grid" aria-label="Ways to install">
+<article class="install-card install-card--primary">
+<span class="badge badge--accent">Available now</span>
+<h2>Direct download</h2>
+<p>Install the app file yourself. Works on any Android phone, including ones without Google.</p>
+<a class="button download-apk" href="{{ release.apkUrl }}">Download Deaftly {{ release.version }} ({{ release.apkSizeMb }} MB)</a>
+<a href="#how">How to install it</a>
+</article>
+<article class="install-card">
+<span class="badge">Coming soon</span>
+<h2>Google Play</h2>
+<p>Install and update automatically from the Play Store.</p>
+</article>
+<article class="install-card">
+<span class="badge">Coming soon</span>
+<h2>iPhone</h2>
+<p>Install from the App Store.</p>
+</article>
+</section>
+
+<section class="band">
+<div class="wrap split">
+<div id="why">
+<h2>Why download it directly?</h2>
+<ul class="reason-list">
+<li><strong>No Google account needed</strong><span>You don't need to sign in to anything to get it.</span></li>
+<li><strong>Phones without Google</strong><span>It works on privacy-focused versions of Android and on phones sold without the Play Store.</span></li>
+<li><strong>Your choice of where apps come from</strong><span>You don't have to go through a big app store to get it. Read about our <a href="/ethics/">ethics and sustainability</a>.</span></li>
+<li><strong>Straight from the people who make it</strong><span>Every release is built in public and signed with the same key, so you can check it's genuine.</span></li>
+</ul>
+</div>
+<div class="panel" id="expect">
+<h2>What to expect</h2>
+<dl class="expect-list">
+<div><dt>Updates aren't automatic</dt><dd>When there's a new version, download it from this page and install it over the top. <a href="/whats-new/">What's new</a> lists every release.</dd></div>
+<div><dt>Your phone will warn you</dt><dd>Android shows a warning for every app installed this way. That's normal.</dd></div>
+<div><dt>It's still scanned</dt><dd>If your phone has Google Play Protect, it still checks the app like any other.</dd></div>
+<div><dt>Your templates and settings are kept</dt><dd>Installing a new version keeps everything you've set up.</dd></div>
+</dl>
+</div>
+</div>
+</section>
+
+<section class="wrap section" id="how">
+<h2>How to install it</h2>
+<ol class="steps">
+<li><strong>Download</strong><span>On your phone, tap the download button above. Your phone may warn that this type of file can harm your device. That appears for every app installed this way. Tap <b>Download anyway</b> if you're happy to continue.</span></li>
+<li><strong>Open the file</strong><span>When the download finishes, tap <b>Open</b>, or open the file from your Downloads folder.</span></li>
+<li><strong>Allow it</strong><span>Android will say it can't install apps from this source. Tap <b>Settings</b>, then switch on <b>Allow from this source</b> for the app you downloaded it with, such as Chrome or Files. Go back and tap <b>Install</b>.</span></li>
+<li><strong>Open Deaftly</strong><span>When it says the app is installed, tap <b>Open</b>.</span></li>
+<li><strong>Tidy up</strong><span>You can now switch Allow from this source off again. Doing so doesn't affect Deaftly.</span></li>
+</ol>
+<p class="muted">Menu names differ between phone makers. If you can't see the option, search your phone's Settings for “Install unknown apps”.</p>
+
+<h3>Updating</h3>
+<p>Download the new version from this page, open it and tap <b>Update</b> or <b>Install</b>. It installs over the old one.</p>
+<p>If Android says the app conflicts with an existing one, or that the signatures don't match, stop. The file didn't come from Deaftly. Don't uninstall your copy to get around it: download it again from this page.</p>
+
+<details class="panel">
+<summary>For techies: check the signature</summary>
+<p>Every official release is signed with this SHA-256 certificate fingerprint:</p>
+<code class="fingerprint">CD:70:A2:F4:8E:E6:1F:8D:90:31:91:CE:BF:D8:D0:D7:2B:D2:57:C9:11:D8:DC:10:0F:A6:FE:AD:F7:6A:53:EB</code>
+<p>Check it with <code>apksigner verify --print-certs</code> from the Android SDK build tools.</p>
+</details>
+</section>
