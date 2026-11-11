@@ -82,7 +82,6 @@ jobs:
       - run: pnpm test:e2e
         env:
           DEAFTLY_RELEASES_FIXTURE: test/fixtures/releases.json
-        env:
           E2E_BROWSERS: safari
 
   e2e-safari:
