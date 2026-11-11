@@ -1,0 +1,27 @@
+---
+layout: base.njk
+title: What's new
+description: Every Deaftly release, newest first, with what changed and a download for each version.
+---
+<div class="wrap section section--tight prose">
+<h1>What's new</h1>
+<p class="lede">Every Deaftly release, newest first. To update, download the latest version and install it over the top. Your templates and settings are kept.</p>
+{% for entry in release.releases %}
+<article class="release">
+<div class="release__head">
+<h2>Version {{ entry.version }}</h2>
+{% if loop.first %}<span class="badge badge--accent">Latest</span>{% endif %}
+</div>
+<p class="muted"><time datetime="{{ entry.publishedAt | isoDate }}">{{ entry.publishedAt | longDate }}</time></p>
+{% if entry.notes.length %}
+<ul>
+{% for note in entry.notes %}<li>{{ note }}</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>Small fixes and improvements.</p>
+{% endif %}
+<a class="release__download" href="{{ entry.apkUrl }}">Download version {{ entry.version }} ({{ entry.apkSizeMb }} MB)</a>
+</article>
+{% endfor %}
+</div>
