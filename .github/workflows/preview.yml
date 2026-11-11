@@ -32,7 +32,10 @@ jobs:
         with:
           persist-credentials: false
       - uses: $/.github/actions/setup-node-pnpm
-      - run: pnpm build
+      - name: Build, reading the app's latest release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: pnpm build
       - name: Upload the Preview
         id: upload
         env:

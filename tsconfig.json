@@ -9,7 +9,8 @@
     "lib": ["ES2024", "DOM"],
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["node"]
   },
-  "include": ["src/**/*.js"]
+  "include": ["src/**/*.js", "lib/**/*.js", "views/_data/**/*.js"]
 }
