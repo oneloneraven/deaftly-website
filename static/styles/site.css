@@ -970,3 +970,22 @@ code {
   color: var(--ink-secondary);
   font-size: 1.25rem;
 }
+
+/* Situations */
+
+.situation blockquote {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-small);
+  background: var(--surface);
+  font-size: 1.25rem;
+}
+
+.situation blockquote p {
+  margin: 0;
+}
+
+.situation__cta {
+  margin-top: 3rem;
+  background: var(--accent-soft);
+}
