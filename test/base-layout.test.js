@@ -34,7 +34,7 @@ test("the footer lists every statement page, in order", async () => {
 
 test("pages load fonts and styles from the site itself", async () => {
   const doc = await page("/");
-  expect(doc.querySelector('link[rel="stylesheet"]')?.getAttribute("href")).toBe("/styles/site.css");
+  expect(doc.querySelector('link[rel="stylesheet"]')?.getAttribute("href")).toMatch(/^\/styles\/site\.css\?v=/);
   const preloads = [...doc.querySelectorAll('link[rel="preload"][as="font"]')].map(link => link.getAttribute("href"));
   expect(preloads).toEqual(["/fonts/atkinson-hyperlegible-next.woff2", "/fonts/bricolage-grotesque.woff2"]);
 });

@@ -29,7 +29,8 @@ test("the sitemap lists every page, and robots.txt points to it", async () => {
   const site = await buildSite();
   const sitemap = site.get("/sitemap.xml") ?? "";
   const listed = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
-  expect(listed.sort()).toEqual((await htmlPages()).map(url => `https://deaftly.com${url}`).sort());
+  const indexed = (await htmlPages()).filter(url => url !== "/feedback/thanks/");
+  expect(listed.sort()).toEqual(indexed.map(url => `https://deaftly.com${url}`).sort());
   expect(site.get("/robots.txt")).toContain("Sitemap: https://deaftly.com/sitemap.xml");
 });
 

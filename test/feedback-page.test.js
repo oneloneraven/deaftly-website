@@ -18,7 +18,7 @@ test("the form posts to the endpoint, labels every field and asks for no contact
 
 test("the honeypot is hidden from people and skipped by keyboards", async () => {
   const doc = await page("/feedback/");
-  const trap = doc.querySelector('input[name="website"]');
+  const trap = doc.querySelector('input[name="hpx"]');
   expect(trap?.getAttribute("tabindex")).toBe("-1");
   expect(trap?.getAttribute("autocomplete")).toBe("off");
   expect(trap?.closest("[aria-hidden='true']")).not.toBeNull();

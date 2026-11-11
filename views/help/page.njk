@@ -6,9 +6,6 @@ pagination:
   alias: topic
   addAllPagesToCollections: true
 permalink: "{{ topic.url }}"
-eleventyComputed:
-  title: "{{ topic.title }} – Help"
-  description: "Deaftly help: {{ topic.title }}."
 ---
 <div class="wrap help">
 {% include "help-menu.njk" %}

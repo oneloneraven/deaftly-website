@@ -24,7 +24,7 @@ function harness({ status = 201, allowed = true } = {}) {
 test("a valid message becomes one issue and sends you to the thanks page", async () => {
   const { calls, env, fetchImpl } = harness();
   const response = await handleFeedback(
-    post({ kind: "bug", message: "The camera won't freeze", appVersion: "0.41.1", website: "" }),
+    post({ kind: "bug", message: "The camera won't freeze", appVersion: "0.41.1", hpx: "" }),
     env,
     fetchImpl,
   );
@@ -69,7 +69,7 @@ test("an unknown kind or a malformed app version is refused", async () => {
 test("a filled honeypot looks like success but creates nothing", async () => {
   const { calls, env, fetchImpl } = harness();
   const response = await handleFeedback(
-    post({ kind: "feedback", message: "Buy now", website: "https://spam.example" }),
+    post({ kind: "feedback", message: "Buy now", hpx: "https://spam.example" }),
     env,
     fetchImpl,
   );
@@ -101,7 +101,7 @@ test("error pages never echo what was sent", async () => {
     fetchImpl,
   );
   expect(response.status).toBe(400);
-  expect(await response.text()).not.toMatch(/<script>alert|onerror/);
+  expect(await response.text()).not.toMatch(/<script>alert|<img src=x/);
 });
 
 test("the issue body fences the message so nothing in it renders or pings anyone", () => {

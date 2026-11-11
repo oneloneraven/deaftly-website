@@ -3,6 +3,7 @@ const input = document.querySelector("#help-q");
 const results = document.querySelector("#help-results");
 
 if (form instanceof HTMLFormElement && input instanceof HTMLInputElement && results) {
+  form.hidden = false;
   /** @type {Promise<Array<{ title: string, url: string, text: string }>> | undefined} */
   let index;
   const load = () => (index ??= fetch("/help/index.json").then(response => response.json()));

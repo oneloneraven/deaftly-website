@@ -53,7 +53,7 @@ We don't ask for your name or email address, so we can't reply directly. Please 
 
 ## Your rights
 
-You can ask what we hold about you, and ask us to correct or delete it, through the [feedback form](/feedback/). Because the app keeps your data on your phone, you can delete it yourself at any time by deleting your templates or the app.
+Because the feedback form doesn't ask who you are, we can't link a message to you. If you've sent something you want removed, send another message quoting enough of it for us to find it, and we'll delete it. Because the app keeps your data on your phone, you can delete it yourself at any time by deleting your templates or the app.
 
 ## Changes
 
