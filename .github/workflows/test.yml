@@ -84,7 +84,6 @@ jobs:
         env:
           DEAFTLY_RELEASES_FIXTURE: test/fixtures/releases.json
           DEAFTLY_HELP_FIXTURE: test/fixtures/help
-        env:
           E2E_BROWSERS: safari
 
   e2e-safari:
