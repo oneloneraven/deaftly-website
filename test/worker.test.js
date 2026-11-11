@@ -13,3 +13,9 @@ test("everything else is served from static assets", async () => {
   const response = await worker.fetch(new Request("https://example.test/"), env);
   expect(await response.text()).toBe("asset");
 });
+
+test("the feedback endpoint only accepts POST", async () => {
+  const response = await worker.fetch(new Request("https://example.test/api/feedback"), /** @type {any} */ (env));
+  expect(response.status).toBe(405);
+  expect(response.headers.get("Allow")).toBe("POST");
+});

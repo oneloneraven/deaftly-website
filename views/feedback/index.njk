@@ -1,0 +1,33 @@
+---
+layout: base.njk
+title: Feedback and bug reports
+description: Tell us what you think of Deaftly, or report a bug. We don't ask for your name or email address.
+---
+<div class="wrap section section--tight prose">
+<h1>Feedback and bug reports</h1>
+<p class="lede">Tell us what's working, what isn't, or what you'd like Deaftly to do.</p>
+<p>We don't ask for your name or email address, so we can't reply to you directly. Please don't include personal details in your message. See <a href="/privacy/">privacy</a> for what we keep and for how long.</p>
+
+<form class="feedback-form" action="/api/feedback" method="post">
+<fieldset>
+<legend>What's this about?</legend>
+<label class="choice"><input type="radio" name="kind" value="feedback" checked> Feedback or an idea</label>
+<label class="choice"><input type="radio" name="kind" value="bug"> Something's not working</label>
+</fieldset>
+
+<label for="message">Your message</label>
+<textarea id="message" name="message" rows="8" maxlength="5000" required aria-describedby="message-hint"></textarea>
+<p id="message-hint" class="muted">Up to 5,000 characters. For a bug, say what you did and what happened.</p>
+
+<label for="appVersion">App version (optional)</label>
+<input id="appVersion" name="appVersion" type="text" inputmode="decimal" pattern="\d+\.\d+\.\d+" autocomplete="off" aria-describedby="version-hint">
+<p id="version-hint" class="muted">Three numbers, like 0.41.1. It's in your phone's Settings, under Apps, then Deaftly.</p>
+
+<div class="trap" aria-hidden="true">
+<label for="website">Leave this empty</label>
+<input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+</div>
+
+<button class="button" type="submit">Send</button>
+</form>
+</div>
