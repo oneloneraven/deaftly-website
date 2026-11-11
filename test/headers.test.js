@@ -24,3 +24,7 @@ test("the policy allows only the site's own origin", () => {
   }
   expect(csp).not.toMatch(/https?:|'unsafe-inline'|'unsafe-eval'|\*/);
 });
+
+test("the policy doesn't upgrade requests, which breaks Safari on a local http server", () => {
+  expect(csp).not.toContain("upgrade-insecure-requests");
+});
