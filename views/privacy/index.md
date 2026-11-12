@@ -39,21 +39,13 @@ Deaftly only uses the camera when you choose to read text with it, and asks firs
 - **Visiting the site.** Like any website, our hosting provider handles your IP address and the pages you ask for, so it can deliver them and protect the site from attacks. It keeps this only briefly, for those purposes.
 - **Fonts and images** are served from this site, so your visit doesn't send requests to anyone else.
 
-## The feedback form
+## Feedback
 
-When you use the [feedback form](/feedback/), we collect:
-
-- whether it's feedback or a bug report
-- your message
-- your app version, if you give it
-
-We don't ask for your name or email address, so we can't reply directly. Please don't include personal details in your message.
-
-**Why:** to fix problems and improve Deaftly. **Where it goes:** a private list that only the people who make Deaftly can see. **How long:** until we've dealt with it, and no more than 12 months.
+The [feedback form](/feedback/) isn't open yet. Before it opens, we'll update this page to say exactly what it collects, why, where it goes and how long it's kept.
 
 ## Your rights
 
-Because the feedback form doesn't ask who you are, we can't link a message to you. If you've sent something you want removed, send another message quoting enough of it for us to find it, and we'll delete it. Because the app keeps your data on your phone, you can delete it yourself at any time by deleting your templates or the app.
+The app keeps your data on your phone, so you can delete it yourself at any time by deleting your templates or the app. This website doesn't collect personal data from you.
 
 ## Changes
 

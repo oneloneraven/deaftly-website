@@ -1,33 +1,12 @@
 ---
 layout: base.njk
 title: Feedback and bug reports
-description: Tell us what you think of Deaftly, or report a bug. We don't ask for your name or email address.
+description: A way to send Deaftly feedback and bug reports is coming soon. Until then, the help pages cover most questions.
 ---
 <div class="wrap section section--tight prose">
 <h1>Feedback and bug reports</h1>
-<p class="lede">Tell us what's working, what isn't, or what you'd like Deaftly to do.</p>
-<p>We don't ask for your name or email address, so we can't reply to you directly. Please don't include personal details in your message. See <a href="/privacy/">privacy</a> for what we keep and for how long.</p>
-
-<form class="feedback-form" action="/api/feedback" method="post">
-<fieldset>
-<legend>What's this about?</legend>
-<label class="choice"><input type="radio" name="kind" value="feedback" checked> Feedback or an idea</label>
-<label class="choice"><input type="radio" name="kind" value="bug"> Something's not working</label>
-</fieldset>
-
-<label for="message">Your message</label>
-<textarea id="message" name="message" rows="8" maxlength="5000" required aria-describedby="message-hint"></textarea>
-<p id="message-hint" class="muted">Up to 5,000 characters. For a bug, say what you did and what happened.</p>
-
-<label for="appVersion">App version (optional)</label>
-<input id="appVersion" name="appVersion" type="text" inputmode="decimal" pattern="\d+\.\d+\.\d+" autocomplete="off" aria-describedby="version-hint">
-<p id="version-hint" class="muted">Three numbers, like 0.41.1. It's in your phone's Settings, under Apps, then Deaftly.</p>
-
-<div class="trap" aria-hidden="true">
-<label for="hpx">Leave this empty</label>
-<input id="hpx" name="hpx" type="text" tabindex="-1" autocomplete="off">
-</div>
-
-<button class="button" type="submit">Send</button>
-</form>
+<p class="lede">A way to send us feedback and report bugs is coming soon.</p>
+<p>We want to hear what's working, what isn't and what you'd like Deaftly to do. We're setting up a proper way to receive your messages, and this page will have a form as soon as it's ready.</p>
+<p>In the meantime, <a href="/help/">the help pages</a> cover using Deaftly, installing and updating, and what to do when something isn't working.</p>
+<p><a class="button" href="/help/">Go to help</a></p>
 </div>

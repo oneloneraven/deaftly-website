@@ -39,13 +39,6 @@ test("I4: a help link the site can't resolve fails the build, naming the file", 
   ).toHaveLength(1);
 });
 
-test("I5: the honeypot field has a name browsers won't autofill", async () => {
-  const doc = await page("/feedback/");
-  const trap = doc.querySelector(".trap input");
-  expect(trap?.getAttribute("name")).toBe("hpx");
-  expect(doc.querySelector('input[name="website"]')).toBeNull();
-});
-
 const post = (/** @type {Record<string, string>} */ fields, headers = {}) =>
   new Request("https://deaftly.com/api/feedback", { method: "POST", body: new URLSearchParams(fields), headers });
 const env = { FEEDBACK_TOKEN: "t", FEEDBACK_REPO: "o/r", FEEDBACK_LIMITER: { limit: async () => ({ success: true }) } };

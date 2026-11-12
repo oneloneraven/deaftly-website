@@ -58,7 +58,7 @@ test("files are read from the app's help folder at the release tag", async () =>
   };
   expect(await fetchHelpFiles("v1.4.0", fetchImpl)).toEqual([{ name: "a.md", text: "text of a" }]);
   expect(urls).toEqual([
-    "https://api.github.com/repos/ravendarque/deaftly/contents/help?ref=v1.4.0",
+    "https://api.github.com/repos/oneloneraven/deaftly/contents/help?ref=v1.4.0",
     "https://raw.example/a.md",
   ]);
 });
