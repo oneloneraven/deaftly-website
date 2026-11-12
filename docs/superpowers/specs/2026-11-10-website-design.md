@@ -1,6 +1,6 @@
 # deaftly.com website: design
 
-Epic: [#136](https://github.com/ravendarque/deaftly/issues/136). Features #137–#144. Mockups: the "deaftly.com mockups" canvas (Home, Download, Help).
+Epic: [#136](https://github.com/oneloneraven/deaftly/issues/136). Features #137–#144. Mockups: the "deaftly.com mockups" canvas (Home, Download, Help).
 
 ## Intent
 
@@ -8,7 +8,7 @@ Deaftly needs a public home that does three jobs, in this order of importance:
 
 1. **Explain and attract.** Deaf people who've heard of Deaftly come to find out what it is. Search brings in deaf people who haven't heard of it. This is the main job.
 2. **Download.** People arrive straight at the download page. It signposts the app stores and the direct APK, and explains what a direct install means and how to do it.
-3. **Help.** People who already have the app look things up. Help will also be in the app ([#187](https://github.com/ravendarque/deaftly/issues/187)), so this is the least-used route.
+3. **Help.** People who already have the app look things up. Help will also be in the app ([#187](https://github.com/oneloneraven/deaftly/issues/187)), so this is the least-used route.
 
 The audience is deaf people. Many will be sceptical at first: "why not just type in my notes app?" G, a deaf collaborator, thought exactly that until they used it. The site answers that question head on.
 
@@ -30,7 +30,7 @@ The audience is deaf people. Many will be sceptical at first: "why not just type
 
 - **Copy that misdescribes the app.** Every feature claim has to match the shipped app. The source of truth is the app's strings and the project board, never older docs or ADRs.
 - **"No internet access" as a selling point or privacy claim.** It isn't a product principle. Don't use it anywhere on the site.
-- Claims the project can't stand behind ("free", invented stats or testimonials). Monetisation is undecided ([#65](https://github.com/ravendarque/deaftly/issues/65)).
+- Claims the project can't stand behind ("free", invented stats or testimonials). Monetisation is undecided ([#65](https://github.com/oneloneraven/deaftly/issues/65)).
 - Naming suppliers or detailing the architecture in public copy without the owner's sign-off. Google Play and the App Store are named because they're the signposts.
 - An email address anywhere on the site (`docs/privacy.md`).
 
