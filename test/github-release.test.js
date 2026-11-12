@@ -4,7 +4,7 @@ import { fetchLatestRelease, releaseNotes } from "../lib/github-release.js";
 const asset = (/** @type {string} */ version, size = 8_601_000) => ({
   name: `deaftly-${version}.apk`,
   size,
-  browser_download_url: `https://github.com/ravendarque/deaftly/releases/download/v${version}/deaftly-${version}.apk`,
+  browser_download_url: `https://github.com/oneloneraven/deaftly/releases/download/v${version}/deaftly-${version}.apk`,
 });
 const release = (/** @type {string} */ version, extra = {}) => ({
   tag_name: `v${version}`,
@@ -40,7 +40,7 @@ test("reads the app repository's releases, with a token when there is one", asyn
     return new Response(JSON.stringify([release("1.0.0")]));
   };
   await fetchLatestRelease(fetchImpl, { token: "t0k" });
-  expect(calls[0].url).toBe("https://api.github.com/repos/ravendarque/deaftly/releases?per_page=30");
+  expect(calls[0].url).toBe("https://api.github.com/repos/oneloneraven/deaftly/releases?per_page=30");
   expect(new Headers(calls[0].init?.headers).get("Authorization")).toBe("Bearer t0k");
 });
 
@@ -64,13 +64,13 @@ test("throws when there is no published release at all", async () => {
 
 test("release notes keep the change lines and drop GitHub's boilerplate", () => {
   const body = [
-    "How to install and update Deaftly: https://github.com/ravendarque/deaftly/blob/main/docs/install.md",
+    "How to install and update Deaftly: https://github.com/oneloneraven/deaftly/blob/main/docs/install.md",
     "",
     "## What's Changed",
-    "* Add a BSL interpreter built-in template by @someone in https://github.com/ravendarque/deaftly/pull/194",
-    "* Fix <script>alert(1)</script> in the editor by @someone in https://github.com/ravendarque/deaftly/pull/195",
+    "* Add a BSL interpreter built-in template by @someone in https://github.com/oneloneraven/deaftly/pull/194",
+    "* Fix <script>alert(1)</script> in the editor by @someone in https://github.com/oneloneraven/deaftly/pull/195",
     "",
-    "**Full Changelog**: https://github.com/ravendarque/deaftly/compare/v0.40.2...v0.41.0",
+    "**Full Changelog**: https://github.com/oneloneraven/deaftly/compare/v0.40.2...v0.41.0",
   ].join("\n");
   expect(releaseNotes(body)).toEqual([
     "Add a BSL interpreter built-in template",
