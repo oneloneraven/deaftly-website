@@ -122,3 +122,37 @@ test("M10/M11/I7: copy makes no claims the project can't back", async () => {
   expect(await text("/feedback/thanks/")).not.toMatch(/read everything/i);
   expect(await text("/privacy/")).not.toMatch(/ask us to correct or delete it, through the feedback form/i);
 });
+
+test("M6: the health endpoint sends a CSP too", async () => {
+  const worker = (await import("../src/worker.js")).default;
+  const response = await worker.fetch(
+    new Request("https://deaftly.com/api/health"),
+    /** @type {any} */ ({ APP_ENV: "test", ASSETS: { fetch: async () => new Response("") } }),
+  );
+  expect(response.headers.get("Content-Security-Policy")).toContain("default-src 'none'");
+});
+
+test("M9: help front matter copes with Windows line endings and quoted titles", () => {
+  const [page] = helpPages([
+    { name: "a.md", text: '---\r\ntitle: "Quick start"\r\norder: 1\r\n---\r\n\r\n# Quick start\r\n' },
+  ]);
+  expect(page.title).toBe("Quick start");
+});
+
+test("M9: two help pages with the same order fail the build", () => {
+  const front = (/** @type {string} */ title) => `---\ntitle: ${title}\norder: 1\n---\n\n# ${title}\n`;
+  expect(() =>
+    helpPages([
+      { name: "a.md", text: front("A") },
+      { name: "b.md", text: front("B") },
+    ]),
+  ).toThrow("help/b.md has the same order as help/a.md");
+});
+
+test("M15: the help search index leaves out link targets and code", () => {
+  const [page] = helpPages([
+    { name: "a.md", text: md("See [the site](https://deaftly.com/download/) and run `apksigner verify`.") },
+  ]);
+  expect(page.plain).toContain("See the site and run");
+  expect(page.plain).not.toMatch(/https|deaftly\.com|apksigner/);
+});

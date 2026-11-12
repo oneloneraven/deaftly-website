@@ -8,10 +8,8 @@ permissions:
   contents: read
 
 jobs:
-  attach:
+  build:
     runs-on: ubuntu-26.04
-    permissions:
-      contents: write
     env:
       TAG: ${{ github.event.release.tag_name }}
     steps:
@@ -24,9 +22,27 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: pnpm build
-      - name: Zip and attach the build
+      - name: Zip the build
+        run: (cd dist && zip -qr "../deaftly-website-dist.zip" .)
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: dist
+          path: deaftly-website-dist.zip
+          retention-days: 1
+
+  attach:
+    needs: build
+    runs-on: ubuntu-26.04
+    # Only this job, which runs no project code, can write to the release.
+    permissions:
+      contents: write
+    env:
+      TAG: ${{ github.event.release.tag_name }}
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: dist
+      - name: Attach the build to the release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          (cd dist && zip -qr "../deaftly-website-dist.zip" .)
-          gh release upload "$TAG" "deaftly-website-dist.zip" --repo "$GITHUB_REPOSITORY" --clobber
+        run: gh release upload "$TAG" "deaftly-website-dist.zip" --repo "$GITHUB_REPOSITORY" --clobber

@@ -11,7 +11,12 @@ export default {
     if (pathname === "/api/health") {
       return Response.json(
         { ok: true, environment: env.APP_ENV, version: env.RELEASE_VERSION ?? "unreleased" },
-        { headers: { "Cache-Control": "no-store" } },
+        {
+          headers: {
+            "Cache-Control": "no-store",
+            "Content-Security-Policy": "default-src 'none'; frame-ancestors 'none'",
+          },
+        },
       );
     }
     if (pathname === "/api/feedback") {
