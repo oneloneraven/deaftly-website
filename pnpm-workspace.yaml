@@ -12,4 +12,6 @@ allowBuilds:
   # wrangler's local runtime downloads its platform binary at install.
   "workerd": true
 
-overrides: {}
+overrides:
+  # Dev-only, via WebdriverIO's mocha, glob and archiver: lifts minimatch past the globparts denial of service (Dependabot alert #2).
+  "minimatch@>=7.0.0 <11.0.1": "^11.0.1"
