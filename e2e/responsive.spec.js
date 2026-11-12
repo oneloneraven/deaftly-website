@@ -1,16 +1,10 @@
+import { readFileSync } from "node:fs";
 import { browser, expect } from "@wdio/globals";
 
-const PAGES = [
-  "/",
-  "/download/",
-  "/help/",
-  "/help/side-by-side/",
-  "/tour/",
-  "/situations/travel/",
-  "/whats-new/",
-  "/privacy/",
-  "/feedback/",
-];
+// Every page in the sitemap.
+const PAGES = [...readFileSync("dist/sitemap.xml", "utf8").matchAll(/<loc>https:\/\/deaftly\.com([^<]+)<\/loc>/g)].map(
+  match => match[1],
+);
 
 const overflowing = () =>
   browser.execute(() => {
@@ -24,7 +18,7 @@ const overflowing = () =>
       .slice(0, 5);
   });
 
-describe("small screens and large text", () => {
+describe("small screens and large text (Chrome and Firefox; Safari can't set the viewport)", () => {
   before(async function () {
     if (!browser.isBidi) this.skip();
     await browser.setViewport({ width: 320, height: 640 });

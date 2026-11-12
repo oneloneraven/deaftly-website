@@ -25,7 +25,6 @@ jobs:
       contents: read
       pull-requests: write
     env:
-      GH_TOKEN: ${{ github.token }}
       PR_NUMBER: ${{ github.event.pull_request.number }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -53,6 +52,7 @@ jobs:
           echo "url=$URL" >> "$GITHUB_OUTPUT"
       - name: Comment the Preview URL
         env:
+          GH_TOKEN: ${{ github.token }}
           PREVIEW_URL: ${{ steps.upload.outputs.url }}
         run: |
           gh pr comment "$PR_NUMBER" --edit-last --body "Preview: $PREVIEW_URL" \
