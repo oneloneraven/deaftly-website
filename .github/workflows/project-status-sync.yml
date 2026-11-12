@@ -5,6 +5,8 @@ on:
   create:
   pull_request:
     types: [opened]
+  issues:
+    types: [opened]
 
 permissions:
   contents: read
@@ -62,3 +64,32 @@ jobs:
               }) { projectV2Item { id } }
             }' -f project="$PROJECT_ID" -f item="$ITEM_ID" -f field="$STATUS_FIELD_ID" -f value="$OPTION_ID"
           echo "Moved issue #$ISSUE_NUM."
+
+  add-issue:
+    # The organisation's plan allows one Auto-add workflow per board, and this board's is used by the main repository.
+    if: github.event_name == 'issues' && github.actor != 'dependabot[bot]'
+    runs-on: ubuntu-26.04
+    env:
+      PROJECT_ID: ${{ vars.PROJECT_ID }}
+      ISSUE_NODE_ID: ${{ github.event.issue.node_id }}
+    steps:
+      - uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        id: token
+        with:
+          client-id: ${{ vars.BOARD_SYNC_APP_CLIENT_ID }}
+          private-key: ${{ secrets.BOARD_SYNC_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+          permission-issues: read
+          permission-organization-projects: write
+
+      - name: Add the issue to the board
+        env:
+          GH_TOKEN: ${{ steps.token.outputs.token }}
+        run: |
+          # shellcheck disable=SC2016 # $project and $content are GraphQL variables
+          gh api graphql -f query='
+            mutation($project:ID!, $content:ID!) {
+              addProjectV2ItemById(input: { projectId: $project, contentId: $content }) { item { id } }
+            }' -f project="$PROJECT_ID" -f content="$ISSUE_NODE_ID"
+          echo "Added the issue to the board."
