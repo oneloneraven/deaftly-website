@@ -18,13 +18,13 @@ test("the ethics page covers screening, tracking, accessibility, sustainability 
   const body = await text("/ethics/");
   for (const phrase of [
     /BDS/,
-    /screen/i,
+    /checked every package/i,
     /no tracking|don't track/i,
     /WCAG 2\.2/,
     /deaf people/i,
     /sustainab/i,
     /democratisation/i,
-    /Deaftly is free/,
+    /Deaftly is free for individual users/,
     /code is public/i,
   ])
     expect(body).toMatch(phrase);
