@@ -5,13 +5,13 @@ description: "Collecting a prescription as a deaf person: say who it's for, read
 
 # At the pharmacy
 
-At the pharmacy counter there's often a queue, a screen between you and the pharmacist, and questions about your prescription. Deaftly helps you say what you need and get the details right.
+At the pharmacy counter there can be a queue, a screen between you and the pharmacist, and questions about your prescription. Deaftly helps you say what you need and get the details right.
 
 ## Collecting a prescription
 
 Use the **Pharmacy** template. Fill in who it's for, then show it at the counter:
 
-> Hi! I'm deaf. I'm collecting a prescription for **Alex Morgan**. Please **type on my phone**.
+> Hi! I'm deaf. I'm collecting a prescription for **Layla Hassan**. Please **type on my phone**.
 
 ## Getting medicine names right
 

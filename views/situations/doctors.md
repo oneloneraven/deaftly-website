@@ -5,13 +5,13 @@ description: "Communicating at the doctor's as a deaf person: check in at recept
 
 # At the doctor's
 
-Communicating at the doctor's as a deaf person often goes wrong before the appointment starts: at the reception desk, when your name is called, or when someone talks to you from behind a screen. Deaftly helps with the parts you can control.
+Communicating at the doctor's as a deaf person can go wrong before the appointment starts: at the reception desk, when your name is called, or when someone talks to you from behind a screen. Deaftly helps with the parts you can control.
 
 ## Checking in
 
-Use the **At the doctor's** template. Fill in your appointment time, who it's with and how you'll communicate, then show it at reception:
+Use the **At the doctor's** template. Fill in your name, your appointment time, who it's with and how you'll communicate, then show it at reception:
 
-> Hi! I'm deaf. I have an appointment at **10:30** with **Dr Shah**. I prefer to communicate by **typing on my phone**. If you need to reply, please **write it down** or **type on my phone**.
+> Hi! I'm deaf. My name is **Marcus Campbell**. I have an appointment at **10:30** with **Dr Shah**. I prefer to communicate by **typing on my phone**. If you need to reply, please **write it down** or **type on my phone**.
 
 ## During the appointment
 
