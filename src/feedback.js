@@ -44,7 +44,7 @@ function page(title, message, status, draft) {
   const body = draft ? form(draft) : '<p><a class="button" href="/feedback/">Back to the form</a></p>';
   const html = `<!doctype html>
 <html lang="en-GB">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>${title} – Deaftly</title><link rel="stylesheet" href="/styles/site.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>${title} | Deaftly</title><link rel="stylesheet" href="/styles/site.css"></head>
 <body><main id="main" class="wrap section prose"><h1>${title}</h1><p>${message}</p>${body}</main></body>
 </html>`;
   return new Response(html, {

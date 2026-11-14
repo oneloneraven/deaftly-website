@@ -8,8 +8,8 @@ const md = (/** @type {string} */ body) => `---\ntitle: A\norder: 1\n---\n\n# A\
 
 test("I2: a help title with & or ' is escaped once, not twice", async () => {
   const doc = await page("/help/show/");
-  expect(doc.title).toBe("Show and Type & show – Help – Deaftly");
-  expect(doc.querySelector('meta[property="og:title"]')?.getAttribute("content")).toBe("Show and Type & show – Help");
+  expect(doc.title).toBe("Show and Type & show | Help | Deaftly");
+  expect(doc.querySelector('meta[property="og:title"]')?.getAttribute("content")).toBe("Show and Type & show | Help");
 });
 
 test("I1: stylesheets, scripts and screenshots carry a content hash, so a year's cache never goes stale", async () => {

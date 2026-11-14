@@ -30,7 +30,7 @@ The audience is deaf people. Many will be sceptical at first: "why not just type
 
 - **Copy that misdescribes the app.** Every feature claim has to match the shipped app. The source of truth is the app's strings and the project board, never older docs or ADRs.
 - **"No internet access" as a selling point or privacy claim.** It isn't a product principle. Don't use it anywhere on the site.
-- Claims the project can't stand behind ("free", invented stats or testimonials). Monetisation is undecided ([#65](https://github.com/oneloneraven/deaftly/issues/65)).
+- Claims the project can't stand behind (invented stats or testimonials). Deaftly is free; Ethics explains why.
 - Naming suppliers or detailing the architecture in public copy without the owner's sign-off. Google Play and the App Store are named because they're the signposts.
 - An email address anywhere on the site (`docs/privacy.md`).
 

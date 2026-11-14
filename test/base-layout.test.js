@@ -7,7 +7,7 @@ test("every page declares British English and a titled, described head", async (
   for (const url of [...(await buildSite()).keys()].filter(url => url.endsWith("/"))) {
     const doc = await page(url);
     expect(doc.documentElement.lang, url).toBe("en-GB");
-    expect(doc.title, url).toMatch(/ – Deaftly$|^Deaftly$/);
+    expect(doc.title, url).toMatch(/ \| Deaftly$|^Deaftly$/);
     expect(doc.querySelector('meta[name="description"]')?.getAttribute("content"), url).toBeTruthy();
     expect(doc.querySelector('meta[name="viewport"]')?.getAttribute("content"), url).toContain("width=device-width");
   }
@@ -65,5 +65,12 @@ test("the home page, tour and every situation end with the same Get Deaftly call
     expect(links.map(text), url).toEqual(["Download"]);
     expect(links[0].getAttribute("href"), url).toBe("/download/");
     expect(text(cta), url).not.toMatch(/coming soon|Android/i);
+  }
+});
+
+test("site copy uses no en or em dashes", async () => {
+  for (const url of [...(await buildSite()).keys()].filter(url => url.endsWith("/") && !/^\/help\/.+/.test(url))) {
+    const doc = await page(url);
+    expect(`${doc.title} ${doc.querySelector("main")?.textContent}`, url).not.toMatch(/[–—]/);
   }
 });

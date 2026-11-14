@@ -32,7 +32,7 @@ We build Deaftly with the help of AI tools. It wouldn't exist otherwise. AI uses
 
 ## We believe in the democratisation of tech
 
-Being deaf already brings extra costs and barriers, and a tool for being understood shouldn't add another one. We don't make money from advertising or from your data, and Deaftly works on older and cheaper Android phones as well as new ones, back to Android 8.
+Deaftly is free. We don't put features behind paywalls, offer paid add-ons, or make money from advertising or your data. Everybody gets the same app. Why? Being deaf already brings extra costs and barriers, and a tool for being understood shouldn't add another one. It also works on older and cheaper Android phones, back to Android 8.
 
 ## The code is public
 

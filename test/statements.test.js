@@ -24,6 +24,7 @@ test("the ethics page covers screening, tracking, accessibility, sustainability 
     /deaf people/i,
     /sustainab/i,
     /democratisation/i,
+    /Deaftly is free/,
     /code is public/i,
   ])
     expect(body).toMatch(phrase);

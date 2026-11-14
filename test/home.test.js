@@ -2,7 +2,7 @@ import { expect, test } from "vitest";
 import { buildSite, page } from "./helpers/build.js";
 
 const text = (/** @type {Element | null | undefined} */ element) => element?.textContent?.replace(/\s+/g, " ").trim();
-const BANNED = [/no internet/i, /never leaves? your phone/i, /offline[- ]only/i, /\bfree\b/i];
+const BANNED = [/no internet/i, /never leaves? your phone/i, /offline[- ]only/i];
 
 test("one H1 says what Deaftly is for", async () => {
   const doc = await page("/");
