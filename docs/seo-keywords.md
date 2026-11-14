@@ -6,11 +6,11 @@ We had no keyword-volume tool when this was written. The phrases come from how U
 
 | Page | Primary phrase | Related phrases | Why |
 |---|---|---|---|
-| `/situations/doctors/` | communicating at the doctor's when you're deaf | deaf GP appointment, deaf patient communication, telling reception I'm deaf | GP access for deaf patients is a recurring theme in RNID guidance and in Healthwatch reports. Deaf patients report that their communication needs aren't met at reception or during appointments. |
-| `/situations/pharmacy/` | collecting a prescription when you're deaf | deaf at the pharmacy, medicine names when deaf, asking the pharmacist when deaf | Pharmacies come up alongside GP surgeries in RNID and Healthwatch accounts of deaf people's healthcare access. Medicine names are where misreading matters most. |
-| `/situations/ordering-food/` | ordering food when you're deaf | deaf ordering at a restaurant, deaf at a café counter, food allergy deaf | Deaf-access guides list ordering food as a common short exchange where typed text helps, and where lighting and visual menus matter. |
+| `/situations/doctors/` | communicating at the doctor's as a deaf person | deaf GP appointment, deaf patient communication, telling reception I'm deaf | GP access for deaf patients is a recurring theme in RNID guidance and in Healthwatch reports. Deaf patients report that their communication needs aren't met at reception or during appointments. |
+| `/situations/pharmacy/` | collecting a prescription as a deaf person | deaf at the pharmacy, medicine names when deaf, asking the pharmacist when deaf | Pharmacies come up alongside GP surgeries in RNID and Healthwatch accounts of deaf people's healthcare access. Medicine names are where misreading matters most. |
+| `/situations/ordering-food/` | ordering food as a deaf person | deaf ordering at a restaurant, deaf at a café counter, food allergy deaf | Deaf-access guides list ordering food as a common short exchange where typed text helps, and where lighting and visual menus matter. |
 | `/situations/travel/` | deaf train travel communication | asking station staff when deaf, deaf passengers delays, buying a ticket when deaf | UK train operators have been adding BSL and speech-to-text services for deaf passengers, which shows demand for help at stations. |
-| `/situations/shops/` | communicating in shops when you're deaf | deaf at the till, paying when deaf, asking for help in a shop | Shops and counters are the everyday version of the same short exchange. |
+| `/situations/shops/` | communicating in shops as a deaf person | deaf at the till, paying when deaf, asking for help in a shop | Shops and counters are the everyday version of the same short exchange. |
 
 ## Sources
 

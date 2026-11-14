@@ -1,11 +1,11 @@
 ---
-title: Communicating at the doctor's when you're deaf
-description: "Communicating at the doctor's when you're deaf: check in at reception, say how you'll communicate, and follow what's said, with Deaftly's templates and chat."
+title: Communicating at the doctor's as a deaf person
+description: "Communicating at the doctor's as a deaf person: check in at reception, say how you'll communicate, and follow what's said, with Deaftly's templates and chat."
 ---
 
 # At the doctor's
 
-Communicating at the doctor's when you're deaf often goes wrong before the appointment starts: at the reception desk, when your name is called, or when someone talks to you from behind a screen. Deaftly helps with the parts you can control.
+Communicating at the doctor's as a deaf person often goes wrong before the appointment starts: at the reception desk, when your name is called, or when someone talks to you from behind a screen. Deaftly helps with the parts you can control.
 
 ## Checking in
 

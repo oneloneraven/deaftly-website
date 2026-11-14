@@ -1,6 +1,6 @@
 ---
-title: Collecting a prescription when you're deaf
-description: "Collecting a prescription when you're deaf: say who it's for, read medicine names off the label with your camera, and ask questions with Deaftly."
+title: Collecting a prescription as a deaf person
+description: "Collecting a prescription as a deaf person: say who it's for, read medicine names off the label with your camera, and ask questions with Deaftly."
 ---
 
 # At the pharmacy
