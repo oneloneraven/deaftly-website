@@ -46,3 +46,24 @@ test("no page reaches a third party or publishes an email address", async () => 
     expect(html, url).not.toMatch(/<script[^>]+src="https?:/);
   }
 });
+
+test("the footer carries the copyright notice", async () => {
+  const doc = await page("/");
+  expect(text(doc.querySelector("footer .site-footer__copyright"))).toBe("© 2026 One Lone Raven");
+});
+
+test("the home page, tour and every situation end with the same Get Deaftly call to action", async () => {
+  const urls = [...(await buildSite()).keys()].filter(
+    url => url === "/" || url === "/tour/" || /^\/situations\/.+\/$/.test(url),
+  );
+  expect(urls.length).toBeGreaterThan(2);
+  for (const url of urls) {
+    const doc = await page(url);
+    const cta = [...doc.querySelectorAll("main > .cta")].at(-1);
+    expect(text(cta?.querySelector("h2")), url).toBe("Get Deaftly");
+    const links = [...(cta?.querySelectorAll("a") ?? [])];
+    expect(links.map(text), url).toEqual(["Download"]);
+    expect(links[0].getAttribute("href"), url).toBe("/download/");
+    expect(text(cta), url).not.toMatch(/coming soon|Android/i);
+  }
+});

@@ -18,18 +18,21 @@ test("three ways to install, with the stores coming soon", async () => {
   ]);
 });
 
-test("the download button points at the latest APK and says its version and size", async () => {
+test("the download button points at the latest APK, with its version and size beside it", async () => {
   const doc = await page("/download/");
   const button = doc.querySelector("a.download-apk");
   expect(button?.getAttribute("href")).toBe(fixture[0].assets[0].browser_download_url);
-  expect(text(button)).toContain("1.4.0");
-  expect(text(button)).toContain("15.6 MB");
+  expect(text(button)).toBe("Download");
+  const meta = text(doc.querySelector(".install-card__meta"));
+  expect(meta).toContain("1.4.0");
+  expect(meta).toContain("15.6 MB");
+  expect(doc.querySelector('.install-card--primary a[href="/whats-new/"]')).not.toBeNull();
 });
 
 test("it explains why you might install directly, linking the ethics page", async () => {
   const doc = await page("/download/");
   const reasons = doc.querySelectorAll("#why li");
-  expect(reasons.length).toBe(4);
+  expect(reasons.length).toBe(3);
   expect(doc.querySelector('#why a[href="/ethics/"]')).not.toBeNull();
 });
 
@@ -48,9 +51,10 @@ test("the install steps follow the install guide's five steps", async () => {
   expect(steps[4]).toContain("switch Allow from this source off");
 });
 
-test("the signing fingerprint is there in full, folded away", async () => {
+test("the signing fingerprint is there in full, in a plain section", async () => {
   const doc = await page("/download/");
-  expect(text(doc.querySelector("details code"))).toBe(
+  expect(doc.querySelector("details")).toBeNull();
+  expect(text(doc.querySelector("#how .fingerprint"))).toBe(
     "CD:70:A2:F4:8E:E6:1F:8D:90:31:91:CE:BF:D8:D0:D7:2B:D2:57:C9:11:D8:DC:10:0F:A6:FE:AD:F7:6A:53:EB",
   );
 });
