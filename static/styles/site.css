@@ -224,6 +224,11 @@ a:hover {
   padding-block: 0.5rem;
 }
 
+.site-footer__copyright {
+  flex-basis: 100%;
+  margin: 0;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -711,6 +716,11 @@ mark,
   margin-top: auto;
 }
 
+.install-card p.install-card__meta {
+  margin-top: -0.5rem;
+  font-size: 1rem;
+}
+
 .badge {
   padding: 0.3rem 0.85rem;
   border-radius: 999px;
@@ -760,9 +770,10 @@ mark,
 }
 
 .steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
+  max-width: 44rem;
   margin: 2rem 0 1rem;
   padding: 0;
   list-style: none;
@@ -770,9 +781,10 @@ mark,
 }
 
 .steps li {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  row-gap: 0.25rem;
   padding: 1.5rem;
   border: 2px solid var(--line);
   border-radius: 1.5rem;
@@ -790,25 +802,12 @@ mark,
   border-radius: 999px;
   background: var(--accent);
   color: var(--on-accent);
+  grid-row: span 2;
   font-weight: 700;
 }
 
 .steps span {
   color: var(--ink-secondary);
-}
-
-details.panel {
-  margin-top: 2.5rem;
-  border: 2px solid var(--line);
-  background: var(--surface);
-}
-
-summary {
-  display: flex;
-  align-items: center;
-  min-height: 2.75rem;
-  font-weight: 700;
-  cursor: pointer;
 }
 
 code {
@@ -985,11 +984,6 @@ code {
   margin: 0;
 }
 
-.situation__cta {
-  margin-top: 3rem;
-  background: var(--accent-soft);
-}
-
 /* What's new */
 
 .release {
@@ -1142,6 +1136,7 @@ main :is(p, li, dt, dd, label, legend) {
 
 .table-scroll {
   max-width: 100%;
+  margin-bottom: 2rem;
   overflow-x: auto;
 }
 

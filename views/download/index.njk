@@ -6,7 +6,7 @@ description: Get Deaftly for Android 8 and newer. Download it directly, see what
 ---
 <section class="wrap section section--tight">
 <h1>Get Deaftly</h1>
-<p class="lede">For Android 8 and newer. Choose how you'd like to install it.</p>
+<p class="lede">Get it on Android today. Google Play and iPhone are on the way.</p>
 </section>
 
 <section class="wrap install-grid" aria-label="Ways to install">
@@ -14,8 +14,9 @@ description: Get Deaftly for Android 8 and newer. Download it directly, see what
 <span class="badge badge--accent">Available now</span>
 <h2>Direct download</h2>
 <p>Install the app file yourself. Works on any Android phone, including ones without Google.</p>
-<a class="button download-apk" href="{{ release.apkUrl }}">Download Deaftly {{ release.version }} ({{ release.apkSizeMb }} MB)</a>
-<a href="#how">How to install it</a>
+<a class="button download-apk" href="{{ release.apkUrl }}">Download</a>
+<p class="install-card__meta">Version {{ release.version }}, {{ release.apkSizeMb }} MB, for Android 8 and newer</p>
+<p class="install-card__links"><a href="#how">How to install it</a> · <a href="/whats-new/">Previous versions</a></p>
 </article>
 <article class="install-card">
 <span class="badge">Coming soon</span>
@@ -37,7 +38,6 @@ description: Get Deaftly for Android 8 and newer. Download it directly, see what
 <li><strong>No Google account needed</strong><span>You don't need to sign in to anything to get it.</span></li>
 <li><strong>Phones without Google</strong><span>It works on privacy-focused versions of Android and on phones sold without the Play Store.</span></li>
 <li><strong>Your choice of where apps come from</strong><span>You don't have to go through a big app store to get it. Read about our <a href="/ethics/">ethics and sustainability</a>.</span></li>
-<li><strong>Straight from the people who make it</strong><span>Every release is built in public and signed with the same key, so you can check it's genuine.</span></li>
 </ul>
 </div>
 <div class="panel" id="expect">
@@ -67,10 +67,8 @@ description: Get Deaftly for Android 8 and newer. Download it directly, see what
 <p>Download the new version from this page, open it and tap <b>Update</b> or <b>Install</b>. It installs over the old one.</p>
 <p>If Android says the app conflicts with an existing one, or that the signatures don't match, stop. The file didn't come from Deaftly. Don't uninstall your copy to get around it: download it again from this page.</p>
 
-<details class="panel">
-<summary>For techies: check the signature</summary>
+<h3>For techies: check the signature</h3>
 <p>Every official release is signed with this SHA-256 certificate fingerprint:</p>
 <code class="fingerprint">CD:70:A2:F4:8E:E6:1F:8D:90:31:91:CE:BF:D8:D0:D7:2B:D2:57:C9:11:D8:DC:10:0F:A6:FE:AD:F7:6A:53:EB</code>
 <p>Check it with <code>apksigner verify --print-certs</code> from the Android SDK build tools.</p>
-</details>
 </section>

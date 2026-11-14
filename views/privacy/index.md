@@ -31,7 +31,7 @@ If you've turned on Android backup, your phone can copy your templates and setti
 
 ### Camera
 
-Deaftly only uses the camera when you choose to read text with it, and asks first. You can say no and type instead.
+The first time you read text with the camera, Deaftly asks for permission. It only uses the camera when you choose to read text with it. You can say no and type instead.
 
 ## This website
 
