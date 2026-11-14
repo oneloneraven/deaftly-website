@@ -34,14 +34,15 @@ describe("small screens and large text (Chrome and Firefox; Safari can't set the
     });
   }
 
-  it("stacks the Show and Chat panels on a phone", async () => {
+  it("stacks the four features one above another on a phone", async () => {
     await browser.url("/");
-    const [show, chat] = await browser.execute(() =>
-      [...document.querySelectorAll(".hero-panel")].map(panel => {
-        const box = panel.getBoundingClientRect();
+    const boxes = await browser.execute(() =>
+      [...document.querySelectorAll(".hero-features > .feature-tile")].map(tile => {
+        const box = tile.getBoundingClientRect();
         return { top: box.top, bottom: box.bottom };
       }),
     );
-    expect(chat.top).toBeGreaterThanOrEqual(show.bottom);
+    expect(boxes.length).toBe(4);
+    for (let i = 1; i < boxes.length; i++) expect(boxes[i].top).toBeGreaterThanOrEqual(boxes[i - 1].bottom);
   });
 });
