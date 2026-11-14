@@ -1,0 +1,23 @@
+[
+  {
+    "url": "/situations/doctors/",
+    "title": "At the doctor's",
+    "summary": "Check in and tell them how you'll communicate."
+  },
+  {
+    "url": "/situations/pharmacy/",
+    "title": "At the pharmacy",
+    "summary": "Collect a prescription and get medicine names right."
+  },
+  {
+    "url": "/situations/ordering-food/",
+    "title": "Ordering food",
+    "summary": "Order straight off the menu with the camera."
+  },
+  { "url": "/situations/travel/", "title": "Travel", "summary": "Ask about platforms, delays and tickets." },
+  {
+    "url": "/situations/shops/",
+    "title": "Shops and counters",
+    "summary": "Quick questions without the back-and-forth."
+  }
+]
