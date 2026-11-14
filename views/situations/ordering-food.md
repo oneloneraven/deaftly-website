@@ -1,11 +1,11 @@
 ---
-title: Ordering food when you're deaf
-description: "Ordering food when you're deaf, without the guesswork: read the dish off the menu with your camera, flag allergies, and keep the conversation going with Deaftly."
+title: Ordering food as a deaf person
+description: "Ordering food as a deaf person, without the guesswork: read the dish off the menu with your camera, flag allergies, and keep the conversation going with Deaftly."
 ---
 
 # Ordering food
 
-Ordering food when you're deaf can mean pointing at the menu and hoping, or a queue building behind you while you type. Deaftly makes it quick.
+Ordering food as a deaf person can mean pointing at the menu and hoping, or a queue building behind you while you type. Deaftly makes it quick.
 
 ## Order straight off the menu
 

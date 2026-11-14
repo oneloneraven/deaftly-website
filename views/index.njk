@@ -45,10 +45,9 @@ description: Deaftly helps deaf people talk with people who can hear. Show a mes
 <section class="wrap section" id="situations">
 <h2>Wherever you need it</h2>
 <ul class="situation-grid">
-<li><a class="situation-card" href="/situations/doctors/"><strong>At the doctor's</strong><span>Check in and tell them how you'll communicate.</span></a></li>
-<li><a class="situation-card" href="/situations/ordering-food/"><strong>Ordering food</strong><span>Order straight off the menu with the camera.</span></a></li>
-<li><a class="situation-card" href="/situations/travel/"><strong>Travel</strong><span>Ask about platforms, delays and tickets.</span></a></li>
-<li><a class="situation-card" href="/situations/shops/"><strong>Shops and counters</strong><span>Quick questions without the back-and-forth.</span></a></li>
+{% for situation in situations %}
+<li><a class="situation-card" href="{{ situation.url }}"><strong>{{ situation.title }}</strong><span>{{ situation.summary }}</span></a></li>
+{% endfor %}
 </ul>
 </section>
 

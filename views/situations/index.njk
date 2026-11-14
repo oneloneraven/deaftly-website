@@ -1,0 +1,17 @@
+---
+layout: base.njk
+permalink: /situations/
+title: Situations
+description: How Deaftly helps deaf people in everyday situations, from the doctor's and the pharmacy to ordering food, travelling and shopping.
+---
+<section class="wrap section section--tight">
+<h1>Situations</h1>
+<p class="lede">How Deaftly helps in the everyday moments where you need to be understood quickly.</p>
+<ul class="situation-grid">
+{% for situation in situations %}
+<li><a class="situation-card" href="{{ situation.url }}"><strong>{{ situation.title }}</strong><span>{{ situation.summary }}</span></a></li>
+{% endfor %}
+</ul>
+</section>
+
+{% include "get-deaftly.njk" %}

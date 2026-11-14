@@ -1,11 +1,11 @@
 ---
-title: Communicating in shops when you're deaf
-description: "Communicating in shops when you're deaf: ask for help, check prices and pay at the till, with Deaftly's ready-made messages and big, clear text."
+title: Communicating in shops as a deaf person
+description: "Communicating in shops as a deaf person: ask for help, check prices and pay at the till, with Deaftly's ready-made messages and big, clear text."
 ---
 
 # Shops and counters
 
-Communicating in shops when you're deaf is usually a quick question that turns into a guessing game. Deaftly keeps it short.
+Communicating in shops as a deaf person is usually a quick question that turns into a guessing game. Deaftly keeps it short.
 
 ## Asking for something
 

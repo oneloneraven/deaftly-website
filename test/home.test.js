@@ -43,6 +43,7 @@ test("it links to every situation page", async () => {
   const links = [...doc.querySelectorAll("#situations a")].map(link => link.getAttribute("href"));
   expect(links).toEqual([
     "/situations/doctors/",
+    "/situations/pharmacy/",
     "/situations/ordering-food/",
     "/situations/travel/",
     "/situations/shops/",
