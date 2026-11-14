@@ -11,14 +11,17 @@ test("one H1 says what Deaftly is for", async () => {
   expect(text(headings[0])).toBe("Communicate with hearing people quickly and easily");
 });
 
-test("the hero shows all four features, grouped as Show and Chat", async () => {
+test("the hero shows all four features side by side, without Show and Chat groups", async () => {
   const doc = await page("/");
-  const panels = [...doc.querySelectorAll(".hero-panel")];
-  expect(panels.map(panel => text(panel.querySelector("h2")))).toEqual(["Show", "Chat"]);
-  expect(panels.map(panel => [...panel.querySelectorAll("h3")].map(text))).toEqual([
-    ["Start typing", "Templates"],
-    ["Face to face", "Side by side"],
+  const features = doc.querySelector(".hero-features");
+  expect([...(features?.querySelectorAll(":scope > a h2") ?? [])].map(text)).toEqual([
+    "Start typing",
+    "Templates",
+    "Face to face",
+    "Side by side",
   ]);
+  expect(features?.querySelectorAll("h2").length).toBe(4);
+  expect(text(features?.querySelector('a[href="/tour/#templates"]'))).toContain("reading text live with the camera");
 });
 
 test("the hero has no download button of its own", async () => {
