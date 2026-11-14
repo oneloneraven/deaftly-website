@@ -65,3 +65,9 @@ test("the doctor's page has no interpreter or patronising advice", async () => {
   expect(text).toContain("I prefer to communicate by");
   expect(text).not.toMatch(/pharmacy/i);
 });
+
+test("the pharmacy page shows the camera reading a medicine name", async () => {
+  const image = (await page("/situations/pharmacy/")).querySelector("main figure img");
+  expect(image?.getAttribute("src")).toMatch(/^\/screenshots\/pharmacy-camera\.webp/);
+  expect(image?.getAttribute("alt")).toContain("Flucloxacillin");
+});

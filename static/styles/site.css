@@ -26,14 +26,8 @@
   --accent-strong: #4e2f75;
   --accent-soft: #efe7f7;
   --on-accent: #ffffff;
-  --person-b: #ffd9b0;
-  --on-person-b: #2a1a06;
   --highlight: #ffe15c;
   --on-highlight: #15151a;
-  --inverse-ground: #15151a;
-  --inverse-surface: #1e1e26;
-  --inverse-ink: #f1f0ec;
-  --inverse-ink-secondary: #cfcfd6;
 
   --font-body: "Atkinson Hyperlegible Next", system-ui, sans-serif;
   --font-heading: "Bricolage Grotesque", system-ui, sans-serif;
@@ -58,10 +52,6 @@
     --accent-strong: #e0ccf4;
     --accent-soft: #33264a;
     --on-accent: #1e1030;
-    --person-b: #5c3a17;
-    --on-person-b: #ffe6cc;
-    --inverse-ground: #0d0d12;
-    --inverse-surface: #1e1e26;
   }
 }
 
@@ -392,8 +382,12 @@ a:hover {
   }
 }
 
-.hero-features .mini {
-  border: 2px solid var(--line);
+.feature-tile__screen {
+  width: min(100%, 13rem);
+  height: auto;
+  border: 0.45rem solid #15151a;
+  border-radius: 1.75rem;
+  background: #15151a;
 }
 
 .feature-tile {
@@ -418,95 +412,12 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Drawn stand-ins for the app's screens */
-
-.mini {
-  display: flex;
-  min-height: 10.5rem;
-  padding: 1.1rem;
-  border-radius: var(--radius-small);
-  background: var(--ground);
-  color: var(--ink);
-  font-size: 1.0625rem;
-  line-height: 1.7;
-}
-
-mark,
-.mini mark {
+mark {
   padding: 0.05em 0.4em;
   border-radius: 0.4em;
   background: var(--highlight);
   color: var(--on-highlight);
   font-weight: 700;
-}
-
-.mini--show {
-  align-items: center;
-  background: #15151a;
-  color: #ffe15c;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.6rem;
-  line-height: 1.1;
-}
-
-.mini--template {
-  align-items: center;
-}
-
-.mini--f2f {
-  flex-direction: column;
-  padding: 0;
-  overflow: hidden;
-}
-
-.mini--f2f > span {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.mini--f2f__them {
-  background: var(--surface);
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.35rem;
-  transform: rotate(180deg);
-}
-
-.mini--f2f__me {
-  border-top: 2px dashed var(--line-strong);
-  color: var(--ink-secondary);
-}
-
-.mini--chat {
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-.bubble {
-  max-width: 85%;
-  padding: 0.5rem 0.8rem;
-}
-
-.bubble--me {
-  align-self: flex-start;
-  border-radius: 1rem 1rem 1rem 0.25rem;
-  background: #6a4596;
-  color: #ffffff;
-}
-
-.bubble--them {
-  align-self: flex-end;
-  border-radius: 1rem 1rem 0.25rem 1rem;
-  background: var(--person-b);
-  color: var(--on-person-b);
 }
 
 /* Home: situations, quote, call to action */
@@ -863,7 +774,45 @@ code {
   font-size: 1.25rem;
 }
 
+.tour-step .eyebrow {
+  margin-bottom: 0.5rem;
+  color: var(--accent-strong);
+  font-size: 1rem;
+}
+
+.tour-script {
+  margin: 0 0 1em;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-small);
+  background: var(--surface);
+}
+
+.tour-script p {
+  margin: 0.25rem 0;
+  color: var(--ink);
+}
+
 /* Situations */
+
+.situation__screen {
+  margin: 2rem 0;
+}
+
+.situation__screen img {
+  display: block;
+  width: min(100%, 16rem);
+  height: auto;
+  border: 0.45rem solid #15151a;
+  border-radius: 1.75rem;
+  background: #15151a;
+}
+
+.situation__screen figcaption {
+  margin-top: 0.75rem;
+  color: var(--ink-secondary);
+  font-size: 1rem;
+}
 
 .situation blockquote {
   margin: 1.5rem 0;
@@ -995,12 +944,6 @@ h4,
   border-bottom: 1px solid var(--line);
   text-align: left;
   vertical-align: top;
-}
-
-.mini > span {
-  min-width: 0;
-  max-width: 100%;
-  overflow-wrap: anywhere;
 }
 
 .help-menu,

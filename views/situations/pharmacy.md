@@ -17,7 +17,12 @@ Use the **Pharmacy** template. Fill in who it's for, then show it at the counter
 
 Medicine names are long and easy to get wrong. Make your own template with a gap filled by the **camera**, then point it at the label, box or letter and tap the name:
 
-> Can you tell me how to take **amoxicillin**? Please **type on my phone**.
+> Can you tell me how to take **flucloxacillin**? Please **type on my phone**.
+
+<figure class="situation__screen">
+<img src="{{ "/screenshots/pharmacy-camera.webp" | asset }}" width="390" height="844" loading="lazy" alt="The camera pointed at a pharmacy label for Layla Hassan, with the line Flucloxacillin 500mg Capsules selected and shown in the Selected text box.">
+<figcaption>Reading a medicine name off a pharmacy label.</figcaption>
+</figure>
 
 ## Asking questions
 

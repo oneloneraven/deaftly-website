@@ -22,6 +22,14 @@ test("the hero shows all four features side by side, without Show and Chat group
   ]);
   expect(features?.querySelectorAll("h2").length).toBe(4);
   expect(text(features?.querySelector('a[href="/tour/#templates"]'))).toContain("reading text live with the camera");
+  expect(
+    [...(features?.querySelectorAll(".feature-tile img") ?? [])].map(img => img.getAttribute("src")?.split("?")[0]),
+  ).toEqual([
+    "/screenshots/show.webp",
+    "/screenshots/fill.webp",
+    "/screenshots/face-to-face.webp",
+    "/screenshots/side-by-side.webp",
+  ]);
 });
 
 test("the hero has no download button of its own", async () => {
