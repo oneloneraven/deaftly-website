@@ -14,10 +14,25 @@ const SUPPLIERS = [
   /amazon|aws/i,
 ];
 
-test("the ethics page covers screening, tracking, accessibility and sustainability", async () => {
+test("the ethics page covers screening, tracking, accessibility, sustainability and access", async () => {
   const body = await text("/ethics/");
-  for (const phrase of [/BDS/, /screen/i, /no tracking|don't track/i, /WCAG 2\.2/, /deaf people/i, /sustainab/i])
+  for (const phrase of [
+    /BDS/,
+    /screen/i,
+    /no tracking|don't track/i,
+    /WCAG 2\.2/,
+    /deaf people/i,
+    /sustainab/i,
+    /democratisation/i,
+    /code is public/i,
+  ])
     expect(body).toMatch(phrase);
+});
+
+test("no tracking links to the privacy page for the details", async () => {
+  const doc = await page("/ethics/");
+  const heading = [...doc.querySelectorAll("main h2")].find(h2 => h2.textContent === "No tracking");
+  expect(heading?.nextElementSibling?.querySelector('a[href="/privacy/"]')).not.toBeNull();
 });
 
 test("the ethics page names no supplier", async () => {
