@@ -48,3 +48,22 @@ test("the search box has a label and works from a search index", async () => {
   const index = JSON.parse((await buildSite()).get("/help/index.json") ?? "[]");
   expect(index.map((/** @type {{ title: string }} */ entry) => entry.title)).toEqual(TOPICS);
 });
+
+test("the help hub explains how to find answers, without topic tiles", async () => {
+  const doc = await page("/help/");
+  expect(doc.querySelector(".help__content ul")).toBeNull();
+  expect(text(doc.querySelector(".help__content .lede"))).toContain("browse the topics");
+});
+
+test("every help page ends its sidebar with feedback and issue reporting", async () => {
+  const site = await buildSite();
+  for (const url of [...site.keys()].filter(url => /^\/help\/([^/]+\/)?$/.test(url))) {
+    const doc = await page(url);
+    const extras = [...doc.querySelectorAll(".help-menu .help-menu__extra")];
+    expect(
+      extras.map(extra => text(extra.querySelector("h2"))),
+      url,
+    ).toEqual(["Tell us what you think", "Report an issue"]);
+    for (const extra of extras) expect(extra.querySelector("a")?.getAttribute("href"), url).toBe("/feedback/");
+  }
+});
