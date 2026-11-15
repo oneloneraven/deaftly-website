@@ -4,6 +4,10 @@ What personal data Deaftly website processes, why, where it goes and how long it
 kept. Keep this current: a change that collects new data or adds a processor
 updates it in the same PR.
 
+## Controller
+
+One Lone Raven. Contact: support@deaftly.com, as published on the privacy page.
+
 ## Processors
 
 | Processor | What it receives | Purpose | Location |

@@ -43,6 +43,10 @@ The first time you read text with the camera, Deaftly asks for permission. It on
 
 The [feedback form](/feedback/) isn't open yet. Before it opens, we'll update this page to say exactly what it collects, why, where it goes and how long it's kept.
 
+## Who's responsible
+
+Deaftly is made by One Lone Raven, which is responsible for your data under UK data protection law (the "controller"). If you have a question about your data, or want to use your rights, email support@deaftly.com.
+
 ## Your rights
 
 The app keeps your data on your phone, so you can delete it yourself at any time by deleting your templates or the app. This website doesn't collect personal data from you.
