@@ -59,7 +59,7 @@ test("every help page ends its sidebar with feedback and issue reporting", async
   const site = await buildSite();
   for (const url of [...site.keys()].filter(url => /^\/help\/([^/]+\/)?$/.test(url))) {
     const doc = await page(url);
-    const extras = [...doc.querySelectorAll(".help-menu .help-menu__extra")];
+    const extras = [...doc.querySelectorAll(".help-feedback .help-feedback__section")];
     expect(
       extras.map(extra => text(extra.querySelector("h2"))),
       url,

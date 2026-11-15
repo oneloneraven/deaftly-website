@@ -17,7 +17,7 @@ Freeze the picture to make picking easier, and turn on the torch in a dim restau
 
 ## Allergies
 
-The **Food allergy** template says what you're allergic to and asks them to check your food is safe. Show it full screen so it can't be missed.
+The **Food allergy** template says what you're allergic to and asks whether they can prepare your food safely. Show it full screen so it can't be missed.
 
 ## When they ask a question
 

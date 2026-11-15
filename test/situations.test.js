@@ -49,7 +49,8 @@ test("the situations hub links to every situation page, and every situation page
   expect([...links].sort()).toEqual(Object.keys(phrases).sort());
   for (const url of Object.keys(phrases)) {
     const doc = await page(url);
-    expect(doc.querySelector('main a[href="/situations/"]'), url).not.toBeNull();
+    const back = [...doc.querySelectorAll('main a[href="/situations/"]')].map(link => link.textContent);
+    expect(back, url).toEqual(["← Back to situations", "← Back to situations"]);
   }
 });
 
@@ -64,4 +65,10 @@ test("the doctor's page has no interpreter or patronising advice", async () => {
   expect(text).not.toMatch(/interpreter|longer appointment|record that you're deaf|calling your name/i);
   expect(text).toContain("I prefer to communicate by");
   expect(text).not.toMatch(/pharmacy/i);
+});
+
+test("the pharmacy page shows the camera reading a medicine name", async () => {
+  const image = (await page("/situations/pharmacy/")).querySelector("main figure img");
+  expect(image?.getAttribute("src")).toMatch(/^\/screenshots\/pharmacy-camera\.webp/);
+  expect(image?.getAttribute("alt")).toContain("Flucloxacillin");
 });

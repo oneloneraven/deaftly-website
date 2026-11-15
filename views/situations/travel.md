@@ -11,7 +11,7 @@ Announcements, ticket desks and help points are built around hearing. When somet
 
 The **Buy a ticket** template asks for a ticket to wherever you're going. Type the station, then show it:
 
-> Hi! I'm deaf. I'd like a ticket to **Leeds**, please. Please **type on my phone**.
+> Hi! I'm deaf. I'd like a ticket to **Leeds**, please. If you need to reply, please **type on my phone**.
 
 ## Platforms, delays and changes
 

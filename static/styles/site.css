@@ -26,14 +26,8 @@
   --accent-strong: #4e2f75;
   --accent-soft: #efe7f7;
   --on-accent: #ffffff;
-  --person-b: #ffd9b0;
-  --on-person-b: #2a1a06;
   --highlight: #ffe15c;
   --on-highlight: #15151a;
-  --inverse-ground: #15151a;
-  --inverse-surface: #1e1e26;
-  --inverse-ink: #f1f0ec;
-  --inverse-ink-secondary: #cfcfd6;
 
   --font-body: "Atkinson Hyperlegible Next", system-ui, sans-serif;
   --font-heading: "Bricolage Grotesque", system-ui, sans-serif;
@@ -58,10 +52,6 @@
     --accent-strong: #e0ccf4;
     --accent-soft: #33264a;
     --on-accent: #1e1030;
-    --person-b: #5c3a17;
-    --on-person-b: #ffe6cc;
-    --inverse-ground: #0d0d12;
-    --inverse-surface: #1e1e26;
   }
 }
 
@@ -218,6 +208,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.site-header a.nav-accent:not(.button):not(.wordmark) {
+  color: var(--accent);
+  font-weight: 700;
+}
+
 .site-footer {
   margin-top: 4rem;
   border-top: 1px solid var(--line);
@@ -272,12 +267,6 @@ a:hover {
   background: var(--surface);
   border-color: var(--ink);
   color: var(--ink);
-}
-
-.button--small {
-  min-height: 2.75rem;
-  padding: 0.6rem 1.35rem;
-  font-size: 1.0625rem;
 }
 
 .visually-hidden {
@@ -392,24 +381,35 @@ a:hover {
   }
 }
 
-.hero-features .mini {
-  border: 2px solid var(--line);
+.feature-tile__screen {
+  align-self: flex-start;
+  width: min(100%, 15rem);
+  margin-top: auto;
+  height: auto;
+  border: 0.45rem solid #15151a;
+  border-radius: 1.75rem;
+  background: #15151a;
 }
 
 .feature-tile {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: var(--surface);
   color: var(--ink);
   text-decoration: none;
 }
 
 .feature-tile h2 {
   margin: 0;
+  color: var(--accent);
   font-size: 1.5rem;
 }
 
-.feature-tile > span:last-child {
+.feature-tile > span {
+  margin-bottom: 0.75rem;
   color: var(--ink-secondary);
   font-size: 1.0625rem;
 }
@@ -418,95 +418,12 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Drawn stand-ins for the app's screens */
-
-.mini {
-  display: flex;
-  min-height: 10.5rem;
-  padding: 1.1rem;
-  border-radius: var(--radius-small);
-  background: var(--ground);
-  color: var(--ink);
-  font-size: 1.0625rem;
-  line-height: 1.7;
-}
-
-mark,
-.mini mark {
+mark {
   padding: 0.05em 0.4em;
   border-radius: 0.4em;
   background: var(--highlight);
   color: var(--on-highlight);
   font-weight: 700;
-}
-
-.mini--show {
-  align-items: center;
-  background: #15151a;
-  color: #ffe15c;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.6rem;
-  line-height: 1.1;
-}
-
-.mini--template {
-  align-items: center;
-}
-
-.mini--f2f {
-  flex-direction: column;
-  padding: 0;
-  overflow: hidden;
-}
-
-.mini--f2f > span {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.mini--f2f__them {
-  background: var(--surface);
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.35rem;
-  transform: rotate(180deg);
-}
-
-.mini--f2f__me {
-  border-top: 2px dashed var(--line-strong);
-  color: var(--ink-secondary);
-}
-
-.mini--chat {
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-.bubble {
-  max-width: 85%;
-  padding: 0.5rem 0.8rem;
-}
-
-.bubble--me {
-  align-self: flex-start;
-  border-radius: 1rem 1rem 1rem 0.25rem;
-  background: #6a4596;
-  color: #ffffff;
-}
-
-.bubble--them {
-  align-self: flex-end;
-  border-radius: 1rem 1rem 0.25rem 1rem;
-  background: var(--person-b);
-  color: var(--on-person-b);
 }
 
 /* Home: situations, quote, call to action */
@@ -717,18 +634,50 @@ code {
 /* Help */
 
 .help {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 2.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "menu" "content" "feedback";
+  gap: 2rem;
   padding-block: clamp(2rem, 6vw, 4rem);
 }
 
+@media (min-width: 48rem) {
+  .help {
+    grid-template-columns: 15rem minmax(0, 1fr);
+    grid-template-areas: "menu content" "feedback content";
+    grid-template-rows: auto 1fr;
+    column-gap: 2.5rem;
+  }
+
+  .help-menu > summary {
+    display: none;
+  }
+}
+
 .help-menu {
-  flex: 1 1 min(15rem, 100%);
+  grid-area: menu;
   padding: 1.25rem;
   border-radius: 1.5rem;
   background: var(--surface);
+}
+
+.help-menu > summary {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.help-menu[open] > summary {
+  margin-bottom: 0.75rem;
+}
+
+.help-feedback {
+  grid-area: feedback;
+  align-self: start;
+  padding: 0 1.25rem;
 }
 
 .help-menu ul {
@@ -755,23 +704,21 @@ code {
   font-weight: 700;
 }
 
-.help-menu__extra {
-  margin-top: 1.25rem;
-  padding: 1.25rem 0.75rem 0;
-  border-top: 1px solid var(--line);
+.help-feedback__section {
+  padding-bottom: 1.25rem;
 }
 
-.help-menu__extra h2 {
+.help-feedback__section h2 {
   font-size: 1.25rem;
 }
 
-.help-menu__extra p {
+.help-feedback__section p {
   margin-bottom: 0.25rem;
   color: var(--ink-secondary);
   font-size: 1rem;
 }
 
-.help-menu .help-menu__extra a {
+.help-feedback__section a {
   display: inline-block;
   padding: 0.5rem 0;
   color: var(--accent-strong);
@@ -779,7 +726,7 @@ code {
 }
 
 .help__content {
-  flex: 999 1 min(32rem, 100%);
+  grid-area: content;
   min-width: 0;
 }
 
@@ -863,7 +810,54 @@ code {
   font-size: 1.25rem;
 }
 
+.tour-step .eyebrow {
+  margin-bottom: 0.5rem;
+  color: var(--accent-strong);
+  font-size: 1rem;
+}
+
+.tour-script {
+  margin: 0 0 1em;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-small);
+  background: var(--surface);
+}
+
+.tour-script p {
+  margin: 0.25rem 0;
+  color: var(--ink);
+}
+
 /* Situations */
+
+.back-link {
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.back-link--end {
+  margin: 3rem 0 0;
+}
+
+.situation__screen {
+  margin: 2rem 0;
+}
+
+.situation__screen img {
+  display: block;
+  width: min(100%, 16rem);
+  height: auto;
+  border: 0.45rem solid #15151a;
+  border-radius: 1.75rem;
+  background: #15151a;
+}
+
+.situation__screen figcaption {
+  margin-top: 0.75rem;
+  color: var(--ink-secondary);
+  font-size: 1rem;
+}
 
 .situation blockquote {
   margin: 1.5rem 0;
@@ -995,12 +989,6 @@ h4,
   border-bottom: 1px solid var(--line);
   text-align: left;
   vertical-align: top;
-}
-
-.mini > span {
-  min-width: 0;
-  max-width: 100%;
-  overflow-wrap: anywhere;
 }
 
 .help-menu,
