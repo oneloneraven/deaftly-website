@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Ethics and sustainability
-description: How Deaftly is built - who we buy from, what we don't do with your data, accessibility, and the footprint of the app and this site.
+description: "How Deaftly is built: accessibility, no tracking, building with AI, who we buy from, and why it's free for individual users."
 ---
 
 <div class="wrap section section--tight prose">

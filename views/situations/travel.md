@@ -1,6 +1,6 @@
 ---
-title: Deaf train travel communication
-description: "Deaf train travel communication made simpler: buy tickets, ask about platforms and delays, and follow the answer with Deaftly on your phone."
+title: Travelling by train as a deaf person
+description: "Travelling by train as a deaf person, made simpler: buy tickets, ask about platforms and delays, and follow the answer with Deaftly on your phone."
 ---
 
 # Travel
@@ -25,5 +25,4 @@ The **Ask for help** template asks someone to help you find something. Pick the 
 
 ## Tips
 
-- Many UK train operators now offer BSL interpreting and staff with deaf awareness training. Check your operator's accessibility page before you travel.
 - Make templates for journeys you do often.

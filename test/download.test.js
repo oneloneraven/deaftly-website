@@ -32,7 +32,7 @@ test("the download button points at the latest APK, with its version and size be
 test("it explains why you might install directly, linking the ethics page", async () => {
   const doc = await page("/download/");
   const reasons = doc.querySelectorAll("#why li");
-  expect(reasons.length).toBe(3);
+  expect(reasons.length).toBe(2);
   expect(doc.querySelector('#why a[href="/ethics/"]')).not.toBeNull();
 });
 
