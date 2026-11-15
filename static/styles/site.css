@@ -383,7 +383,9 @@ a:hover {
 }
 
 .feature-tile__screen {
-  width: min(100%, 13rem);
+  align-self: flex-start;
+  width: min(100%, 15rem);
+  margin-top: auto;
   height: auto;
   border: 0.45rem solid #15151a;
   border-radius: 1.75rem;
@@ -394,16 +396,21 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: var(--surface);
   color: var(--ink);
   text-decoration: none;
 }
 
 .feature-tile h2 {
   margin: 0;
+  color: var(--accent);
   font-size: 1.5rem;
 }
 
-.feature-tile > span:last-child {
+.feature-tile > span {
+  margin-bottom: 0.75rem;
   color: var(--ink-secondary);
   font-size: 1.0625rem;
 }

@@ -25,10 +25,10 @@ test("the hero shows all four features side by side, without Show and Chat group
   expect(
     [...(features?.querySelectorAll(".feature-tile img") ?? [])].map(img => img.getAttribute("src")?.split("?")[0]),
   ).toEqual([
-    "/screenshots/show.webp",
-    "/screenshots/fill.webp",
-    "/screenshots/face-to-face.webp",
-    "/screenshots/side-by-side.webp",
+    "/screenshots/home-show.webp",
+    "/screenshots/home-fill.webp",
+    "/screenshots/home-face-to-face.webp",
+    "/screenshots/home-side-by-side.webp",
   ]);
 });
 
