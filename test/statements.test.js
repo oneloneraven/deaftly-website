@@ -41,6 +41,12 @@ test("the ethics page names no supplier", async () => {
   for (const supplier of SUPPLIERS) expect(body).not.toMatch(supplier);
 });
 
+test("the privacy page names the controller and how to contact them", async () => {
+  const body = await text("/privacy/");
+  expect(body).toContain("One Lone Raven");
+  expect(body).toContain("support@deaftly.com");
+});
+
 test("the privacy page covers the app, Android backup, the site and the feedback form", async () => {
   const body = await text("/privacy/");
   for (const phrase of [
