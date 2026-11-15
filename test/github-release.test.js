@@ -1,4 +1,4 @@
-import { expect, test } from "vitest";
+import { expect, test, vi } from "vitest";
 import { fetchLatestRelease, releaseNotes } from "../lib/github-release.js";
 
 const asset = (/** @type {string} */ version, size = 8_601_000) => ({
@@ -50,9 +50,18 @@ test("throws when the API refuses", async () => {
   );
 });
 
-test("throws when the newest release has no APK yet", async () => {
+test("while the newest release's APK is still uploading, it uses the newest release that has one", async () => {
+  const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
+  const latest = await fetchLatestRelease(respond([release("1.4.0", { assets: [] }), release("1.3.0")]));
+  expect(latest.version).toBe("1.3.0");
+  expect(latest.releases.map(r => r.tag)).toEqual(["v1.3.0"]);
+  expect(warn).toHaveBeenCalledWith(expect.stringContaining("v1.4.0 has no .apk asset yet"));
+  warn.mockRestore();
+});
+
+test("throws when no release has an APK yet", async () => {
   await expect(fetchLatestRelease(respond([release("1.4.0", { assets: [] })]))).rejects.toThrow(
-    "v1.4.0 has no .apk asset yet",
+    "has no release with an .apk asset yet",
   );
 });
 
