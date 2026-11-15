@@ -208,6 +208,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.site-header a.nav-accent:not(.button):not(.wordmark) {
+  color: var(--accent);
+  font-weight: 700;
+}
+
 .site-footer {
   margin-top: 4rem;
   border-top: 1px solid var(--line);
@@ -262,12 +267,6 @@ a:hover {
   background: var(--surface);
   border-color: var(--ink);
   color: var(--ink);
-}
-
-.button--small {
-  min-height: 2.75rem;
-  padding: 0.6rem 1.35rem;
-  font-size: 1.0625rem;
 }
 
 .visually-hidden {
@@ -635,18 +634,50 @@ code {
 /* Help */
 
 .help {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 2.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "menu" "content" "feedback";
+  gap: 2rem;
   padding-block: clamp(2rem, 6vw, 4rem);
 }
 
+@media (min-width: 48rem) {
+  .help {
+    grid-template-columns: 15rem minmax(0, 1fr);
+    grid-template-areas: "menu content" "feedback content";
+    grid-template-rows: auto 1fr;
+    column-gap: 2.5rem;
+  }
+
+  .help-menu > summary {
+    display: none;
+  }
+}
+
 .help-menu {
-  flex: 1 1 min(15rem, 100%);
+  grid-area: menu;
   padding: 1.25rem;
   border-radius: 1.5rem;
   background: var(--surface);
+}
+
+.help-menu > summary {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.help-menu[open] > summary {
+  margin-bottom: 0.75rem;
+}
+
+.help-feedback {
+  grid-area: feedback;
+  align-self: start;
+  padding: 0 1.25rem;
 }
 
 .help-menu ul {
@@ -673,23 +704,21 @@ code {
   font-weight: 700;
 }
 
-.help-menu__extra {
-  margin-top: 1.25rem;
-  padding: 1.25rem 0.75rem 0;
-  border-top: 1px solid var(--line);
+.help-feedback__section {
+  padding-bottom: 1.25rem;
 }
 
-.help-menu__extra h2 {
+.help-feedback__section h2 {
   font-size: 1.25rem;
 }
 
-.help-menu__extra p {
+.help-feedback__section p {
   margin-bottom: 0.25rem;
   color: var(--ink-secondary);
   font-size: 1rem;
 }
 
-.help-menu .help-menu__extra a {
+.help-feedback__section a {
   display: inline-block;
   padding: 0.5rem 0;
   color: var(--accent-strong);
@@ -697,7 +726,7 @@ code {
 }
 
 .help__content {
-  flex: 999 1 min(32rem, 100%);
+  grid-area: content;
   min-width: 0;
 }
 
@@ -801,6 +830,15 @@ code {
 }
 
 /* Situations */
+
+.back-link {
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.back-link--end {
+  margin: 3rem 0 0;
+}
 
 .situation__screen {
   margin: 2rem 0;

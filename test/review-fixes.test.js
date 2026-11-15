@@ -18,9 +18,8 @@ test("I1: stylesheets, scripts and screenshots carry a content hash, so a year's
     /^\/styles\/site\.css\?v=[0-9a-f]{10}$/,
   );
   const help = await page("/help/");
-  expect(help.querySelector("script[src]")?.getAttribute("src")).toMatch(
-    /^\/scripts\/help-search\.js\?v=[0-9a-f]{10}$/,
-  );
+  for (const script of help.querySelectorAll("script[src]"))
+    expect(script.getAttribute("src")).toMatch(/^\/scripts\/help-(search|menu)\.js\?v=[0-9a-f]{10}$/);
   const tour = await page("/tour/");
   for (const image of tour.querySelectorAll("main img"))
     expect(image.getAttribute("src")).toMatch(/^\/screenshots\/[a-z-]+\.webp\?v=[0-9a-f]{10}$/);

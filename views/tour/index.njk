@@ -1,16 +1,16 @@
 ---
 layout: base.njk
 title: Tour of the app
-description: "Follow an evening out with Deaftly: Type & show at the front desk, Face to face, ordering with a template and the camera, and Side by side with the waiter."
+description: "A tour of Deaftly's screens and features, following an evening out: Face to face at the door, Type & show at the front desk, ordering with a template and the camera, and Side by side with the waiter."
 ---
 <div class="wrap section section--tight">
 <h1>A tour of Deaftly</h1>
-<p class="lede">An evening out at a restaurant, from the front desk to the last question, and how Deaftly helps at each step.</p>
+<p class="lede">Let's take a tour of the screens and features of the app.</p>
 </div>
 
 <div class="wrap tour">
 <section id="home-screen" class="tour-step">
-<img src="{{ "/screenshots/hub.webp" | asset }}" width="390" height="844" loading="lazy" alt="The Deaftly home screen, with Start typing and Use a template under Show, and Face to face and Side by side under Chat, each with an information button.">
+<img src="{{ "/screenshots/hub.webp" | asset }}" width="390" height="600" loading="lazy" alt="The Deaftly home screen, with Start typing and Use a template under Show, and Face to face and Side by side under Chat, each with an information button.">
 <div>
 <p class="eyebrow">The home screen</p>
 <h2>Before you go</h2>
@@ -18,17 +18,26 @@ description: "Follow an evening out with Deaftly: Type & show at the front desk,
 </div>
 </section>
 
+<section id="face-to-face" class="tour-step">
+<img src="{{ "/screenshots/face-to-face.webp" | asset }}" width="390" height="600" loading="lazy" alt="Face to face. At the top, upside down for the driver, the words Hi! I'm deaf, so I'll type. Is that parcel for. At the bottom, the same words in the typing field.">
+<div>
+<p class="eyebrow">Face to face</p>
+<h2>At the door</h2>
+<p>Just as you're heading out, a delivery driver knocks with a parcel. They don't know you're deaf, so you start: hold your phone and type “Hi! I'm deaf, so I'll type. Is that parcel for flat 4?” Your words appear upside down at the top of the screen, facing them, so they read along as you type instead of waiting for you to finish. You keep a secure grip on your phone the whole time.</p>
+</div>
+</section>
+
 <section id="type-and-show" class="tour-step">
-<img src="{{ "/screenshots/type-and-show.webp" | asset }}" width="390" height="844" loading="lazy" alt="Type and show with the message: Could I have a table for two by the window, please? We're both vegetarian. A Show button sits below.">
+<img src="{{ "/screenshots/type-and-show.webp" | asset }}" width="390" height="600" loading="lazy" alt="Type and show with the message: Could I have a table for two by the window, please? A Show button sits below.">
 <div>
 <p class="eyebrow">Type &amp; show</p>
 <h2>At the front desk</h2>
-<p>There's a queue at the front desk. Instead of waiting to explain, you type while you wait: “Could I have a table for two by the window, please? We're both vegetarian.”</p>
+<p>At the restaurant there's a queue at the front desk. Instead of waiting to explain, you type while you wait: “Could I have a table for two by the window, please?”</p>
 </div>
 </section>
 
 <section id="show" class="tour-step">
-<img src="{{ "/screenshots/show.webp" | asset }}" width="390" height="844" loading="lazy" alt="The table for two message filling the screen in very large text, with a Continue as chat button below.">
+<img src="{{ "/screenshots/show.webp" | asset }}" width="390" height="600" loading="lazy" alt="The table for two message filling the screen in very large text, with a Continue as chat button below.">
 <div>
 <p class="eyebrow">Show</p>
 <h2>Hold it up</h2>
@@ -36,17 +45,9 @@ description: "Follow an evening out with Deaftly: Type & show at the front desk,
 </div>
 </section>
 
-<section id="face-to-face" class="tour-step">
-<img src="{{ "/screenshots/face-to-face.webp" | asset }}" width="390" height="844" loading="lazy" alt="Face to face. At the top, upside down for the host, the words No, we haven't booked. Is there. At the bottom, the same words in the typing field.">
-<div>
-<p class="eyebrow">Face to face</p>
-<h2>A quick question</h2>
-<p>The host asks whether you've booked. Hold your phone and type your answer. Your words appear upside down at the top of the screen, facing them, so they read along as you type instead of waiting for you to finish. You keep a secure grip on your phone the whole time.</p>
-</div>
-</section>
 
 <section id="templates" class="tour-step">
-<img src="{{ "/screenshots/fill.webp" | asset }}" width="390" height="844" loading="lazy" alt="The Order food template with Pasta arrabbiata filled in as the dish, and a Show button below.">
+<img src="{{ "/screenshots/fill.webp" | asset }}" width="390" height="600" loading="lazy" alt="The Order food template with Pasta arrabbiata filled in as the dish, and a Show button below.">
 <div>
 <p class="eyebrow">Templates</p>
 <h2>Ordering</h2>
@@ -55,7 +56,7 @@ description: "Follow an evening out with Deaftly: Type & show at the front desk,
 </section>
 
 <section id="camera" class="tour-step">
-<img src="{{ "/screenshots/camera.webp" | asset }}" width="390" height="844" loading="lazy" alt="The camera pointed at a printed Italian menu, with a box around each dish name and Pasta arrabbiata selected. An Add to message button is below.">
+<img src="{{ "/screenshots/camera.webp" | asset }}" width="390" height="600" loading="lazy" alt="The camera pointed at a printed Italian menu, with a box around each dish name and Pasta arrabbiata selected. An Add to message button is below.">
 <div>
 <p class="eyebrow">Read text with the camera</p>
 <h2>Straight off the menu</h2>
@@ -64,12 +65,13 @@ description: "Follow an evening out with Deaftly: Type & show at the front desk,
 </section>
 
 <section id="side-by-side" class="tour-step">
-<img src="{{ "/screenshots/side-by-side.webp" | asset }}" width="390" height="844" loading="lazy" alt="Side by side chat between Me and the waiter in two colours. The waiter asks: Sure! Do you have any allergies? Me: Yes, I'm allergic to peanuts. The waiter: Got it, thanks. I'll make sure the kitchen is aware. A switch shows it's the waiter's turn.">
+<img src="{{ "/screenshots/side-by-side.webp" | asset }}" width="390" height="600" loading="lazy" alt="Side by side chat between Me and the waiter in two colours. Me: Hi! I'm deaf. Could I have Pasta arrabbiata please? If you have a question, please type it on my phone. The waiter asks: Sure! Do you have any allergies? Me: Yes, I'm allergic to peanuts. The waiter: Got it, thanks. I'll make sure the kitchen is aware. A switch shows it's the waiter's turn.">
 <div>
 <p class="eyebrow">Side by side</p>
 <h2>Questions from the waiter</h2>
-<p>The waiter wants to check something, so you pass them your phone. Side by side lays the conversation out like a script, one colour each, with a clear prompt showing them where to type.</p>
+<p>The waiter reads your order and wants to check something, so you tap Continue as chat and pass them your phone. Side by side lays the conversation out like a script, one colour each, with a clear prompt showing them where to type.</p>
 <blockquote class="tour-script">
+<p><strong>Me:</strong> Hi! I'm deaf. Could I have Pasta arrabbiata please? If you have a question, please type it on my phone.</p>
 <p><strong>Waiter:</strong> Sure! Do you have any allergies?</p>
 <p><strong>Me:</strong> Yes, I'm allergic to peanuts.</p>
 <p><strong>Waiter:</strong> Got it, thanks. I'll make sure the kitchen is aware.</p>
@@ -79,7 +81,7 @@ description: "Follow an evening out with Deaftly: Type & show at the front desk,
 </section>
 
 <section id="settings" class="tour-step">
-<img src="{{ "/screenshots/settings.webp" | asset }}" width="390" height="844" loading="lazy" alt="The settings screen, with your name, chat colour, appearance, Show colours and built-in templates.">
+<img src="{{ "/screenshots/settings.webp" | asset }}" width="390" height="600" loading="lazy" alt="The settings screen, with your name, chat colour, appearance, Show colours and built-in templates.">
 <div>
 <p class="eyebrow">Settings</p>
 <h2>Make it yours</h2>

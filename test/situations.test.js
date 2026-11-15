@@ -49,7 +49,8 @@ test("the situations hub links to every situation page, and every situation page
   expect([...links].sort()).toEqual(Object.keys(phrases).sort());
   for (const url of Object.keys(phrases)) {
     const doc = await page(url);
-    expect(doc.querySelector('main a[href="/situations/"]'), url).not.toBeNull();
+    const back = [...doc.querySelectorAll('main a[href="/situations/"]')].map(link => link.textContent);
+    expect(back, url).toEqual(["← Back to situations", "← Back to situations"]);
   }
 });
 

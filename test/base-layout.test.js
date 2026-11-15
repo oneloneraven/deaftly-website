@@ -20,16 +20,16 @@ test("a skip link leads to the main landmark", async () => {
   expect(doc.querySelector("main#main")).not.toBeNull();
 });
 
-test("the main navigation lists Tour, Situations, Help and Get the app, in order", async () => {
+test("the main navigation lists Tour, Situations and Get the app, in order", async () => {
   const doc = await page("/");
   const links = [...doc.querySelectorAll('header nav[aria-label="Main"] a')].map(text);
-  expect(links).toEqual(["Tour", "Situations", "Help", "Get the app"]);
+  expect(links).toEqual(["Tour", "Situations", "Get the app"]);
 });
 
 test("the footer lists every statement page, in order", async () => {
   const doc = await page("/");
   const links = [...doc.querySelectorAll('footer nav[aria-label="Footer"] a')].map(text);
-  expect(links).toEqual(["Download", "Tour", "Help", "What's new", "Ethics and sustainability", "Privacy", "Feedback"]);
+  expect(links).toEqual(["Help", "What's new", "Ethics and sustainability", "Privacy", "Feedback"]);
 });
 
 test("pages load fonts and styles from the site itself", async () => {

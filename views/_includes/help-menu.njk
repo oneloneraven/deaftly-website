@@ -1,4 +1,5 @@
-<div class="help-menu">
+<details class="help-menu" id="help-browse" open>
+<summary>Browse help topics</summary>
 <nav aria-label="Help topics">
 <ul>
 {% for topic in help %}
@@ -6,14 +7,4 @@
 {% endfor %}
 </ul>
 </nav>
-<section class="help-menu__extra">
-<h2>Tell us what you think</h2>
-<p>Ideas, likes and dislikes all help us make Deaftly better.</p>
-<a href="/feedback/">Send feedback</a>
-</section>
-<section class="help-menu__extra">
-<h2>Report an issue</h2>
-<p>Something not working? Tell us your app version if you can.</p>
-<a href="/feedback/">Report an issue</a>
-</section>
-</div>
+</details>

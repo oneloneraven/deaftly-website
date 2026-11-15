@@ -7,9 +7,9 @@ test("the tour follows the evening out, step by step", async () => {
   const doc = await page("/tour/");
   expect([...doc.querySelectorAll("main section[id]")].map(section => section.id)).toEqual([
     "home-screen",
+    "face-to-face",
     "type-and-show",
     "show",
-    "face-to-face",
     "templates",
     "camera",
     "side-by-side",
@@ -24,7 +24,7 @@ test("every screenshot has alt text and a size, and every caption is real text",
   for (const image of images) {
     expect(image.getAttribute("alt")?.length, image.getAttribute("src") ?? "").toBeGreaterThan(20);
     expect(image.getAttribute("width")).toBe("390");
-    expect(image.getAttribute("height")).toBe("844");
+    expect(image.getAttribute("height")).toBe("600");
     expect(image.getAttribute("loading")).toBe("lazy");
   }
   for (const section of doc.querySelectorAll("main section[id]"))
