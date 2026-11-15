@@ -21,7 +21,7 @@ The **Food allergy** template says what you're allergic to and asks whether they
 
 ## When they ask a question
 
-Questions like "spicy or mild?" or "eat in or take away?" are where it usually breaks down. Tap **Continue as chat** and pass the phone over. **Side by side** shows them where to type, and you can reply straight away.
+Questions like “spicy or mild?” or “eat in or take away?” are where it usually breaks down. Tap **Continue as chat** and pass the phone over. **Side by side** shows them where to type, and you can reply straight away.
 
 ## Paying
 
