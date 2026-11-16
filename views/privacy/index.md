@@ -19,7 +19,8 @@ Deaftly keeps what you put into it on your phone. We, the people who make Deaftl
 | What | Why | How long |
 |---|---|---|
 | Your templates, and what you type into them. This can include names, health details or routines. | So you can use them again | Until you delete them or the app |
-| Your name, colour and other settings | To set up chats and Show the way you like | Until you change them or delete the app |
+| Your first, last and legal name, if you add them | To fill in your name on templates and, if you turn it on, in chats | Until you change them or delete the app |
+| Your colour and other settings | To set up chats and Show the way you like | Until you change them or delete the app |
 | Chat messages | To hold the conversation | Only while the chat is open. They're deleted when you end the chat, unless you keep it. |
 | Chats you choose to keep | So you can read them or carry on later | Until you delete them or the app |
 | Camera pictures and the text read from them | To add text to a message | Pictures are never stored. Text is kept only if you add it to a template. |
