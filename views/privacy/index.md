@@ -28,7 +28,7 @@ Deaftly keeps what you put into it on your phone. We, the people who make Deaftl
 
 ### Android backup
 
-If you've turned on Android backup, your phone can copy your templates, settings and kept chats to your backup and restore them on a new phone. Kept chats can include anything you and the other person wrote, such as health details. That's a service you choose and control in your phone's settings. Deaftly doesn't set it up or read it, and we can't see it.
+If you've turned on Android backup, your phone can copy your templates, settings and kept chats to your backup and restore them on a new phone. That's a service you choose and control in your phone's settings. Deaftly doesn't set it up or read it, and we can't see it. Kept chats can include anything you and the other person wrote, such as health details.
 
 ### Camera
 
