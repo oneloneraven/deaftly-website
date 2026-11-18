@@ -18,10 +18,8 @@
   "env": {
     "production": {
       "vars": {
-        "APP_ENV": "production",
-        "FEEDBACK_REPO": "oneloneraven/deaftly-feedback"
+        "APP_ENV": "production"
       },
-      "ratelimits": [{ "name": "FEEDBACK_LIMITER", "namespace_id": "2101", "simple": { "limit": 5, "period": 60 } }],
       "assets": {
         "directory": "./dist",
         "binding": "ASSETS"
@@ -37,7 +35,6 @@
       "vars": {
         "APP_ENV": "preview"
       },
-      "ratelimits": [{ "name": "FEEDBACK_LIMITER", "namespace_id": "2102", "simple": { "limit": 5, "period": 60 } }],
       "assets": {
         "directory": "./dist",
         "binding": "ASSETS"
@@ -52,10 +49,8 @@
     },
     "e2e": {
       "vars": {
-        "APP_ENV": "e2e",
-        "FEEDBACK_REPO": "oneloneraven/deaftly-feedback"
+        "APP_ENV": "e2e"
       },
-      "ratelimits": [{ "name": "FEEDBACK_LIMITER", "namespace_id": "2103", "simple": { "limit": 5, "period": 60 } }],
       "assets": {
         "directory": "./dist",
         "binding": "ASSETS"

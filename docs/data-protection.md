@@ -12,7 +12,7 @@ One Lone Raven. Contact: support@deaftly.com, as published on the privacy page.
 
 | Processor | What it receives | Purpose | Location |
 |---|---|---|---|
-| Cloudflare (hosting, Workers) | Visitors' IP addresses and request details; feedback form submissions in transit | Serving the site, protecting it from attacks, running the feedback endpoint | Global edge network |
+| Cloudflare (hosting, Workers) | Visitors' IP addresses and request details; the Turnstile bot check on the feedback page | Serving the site, protecting it from attacks, checking feedback submissions aren't from bots | Global edge network |
 
 ## Processing activities
 
@@ -22,11 +22,10 @@ One Lone Raven. Contact: support@deaftly.com, as published on the privacy page.
 
 The site sets no cookies and runs no analytics or tracking.
 
-The feedback form is not open. It will send to Engage once that exists; this record, the threat model and the privacy page are updated before it opens.
+The feedback form posts straight to Engage (ADR-0005). Engage's own record of processing covers what it stores, for how long and who sees it. Deaftly's product settings use the default 12-month retention.
 
 ## Gaps to settle
 
-- The feedback destination moves to Engage ([ADR-0004](adr/0004-feedback-goes-to-a-private-issue-tracker.md) will be superseded). Settle retention and processors then.
 
 ## Security measures
 

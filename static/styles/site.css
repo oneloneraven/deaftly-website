@@ -934,7 +934,8 @@ code {
 }
 
 .feedback-form textarea,
-.feedback-form input[type="text"] {
+.feedback-form input[type="text"],
+.feedback-form input[type="email"] {
   width: 100%;
   padding: 0.85rem 1rem;
   border: 2px solid var(--outline);

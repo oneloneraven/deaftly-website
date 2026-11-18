@@ -2,7 +2,7 @@
 
 ## Status
 
-Accepted
+Superseded by [ADR-0005](0005-feedback-goes-to-engage.md)
 
 ## Context
 

@@ -43,7 +43,8 @@ test("no page reaches a third party or publishes an email address", async () => 
   for (const [url, html] of await buildSite()) {
     expect(html, url).not.toMatch(/fonts\.googleapis|fonts\.gstatic/);
     expect(html, url).not.toMatch(/mailto:/i);
-    expect(html, url).not.toMatch(/<script[^>]+src="https?:/);
+    // ADR-0005: the feedback page loads Turnstile; no other page loads a third-party script.
+    if (url !== "/feedback/") expect(html, url).not.toMatch(/<script[^>]+src="https?:/);
   }
 });
 
