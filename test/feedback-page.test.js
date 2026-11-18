@@ -1,7 +1,6 @@
-import { readFileSync } from "node:fs";
 import { expect, test } from "vitest";
 import engage from "../views/_data/engage.json" with { type: "json" };
-import { page } from "./helpers/build.js";
+import { buildSite, page } from "./helpers/build.js";
 
 const form = async () => (await page("/feedback/")).querySelector("main form");
 
@@ -52,7 +51,7 @@ test("it has the Turnstile widget with the public site key, and a no-JavaScript 
   expect(engage.turnstileSiteKey).toMatch(/^0x[0-9A-Za-z_-]+$/);
   expect(doc.querySelector(".cf-turnstile")?.getAttribute("data-sitekey")).toBe(engage.turnstileSiteKey);
   expect(doc.querySelector('script[src^="https://challenges.cloudflare.com/turnstile/"]')).not.toBeNull();
-  expect(readFileSync("dist/feedback/index.html", "utf8")).toMatch(
+  expect((await buildSite()).get("/feedback/")).toMatch(
     /<noscript>[\s\S]*hello@deaftly\.com[\s\S]*<\/noscript>/,
   );
 });
