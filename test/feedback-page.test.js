@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { expect, test } from "vitest";
 import engage from "../views/_data/engage.json" with { type: "json" };
 import { buildSite, page } from "./helpers/build.js";
@@ -57,4 +58,14 @@ test("it has the Turnstile widget with the public site key, and a no-JavaScript 
 test("the footer and help still link to it", async () => {
   expect((await page("/")).querySelector('footer a[href="/feedback/"]')).not.toBeNull();
   expect((await page("/help/")).querySelector('main a[href="/feedback/"]')).not.toBeNull();
+});
+
+test("the quote options sit in their own group, hidden by CSS when reporting a problem", async () => {
+  const group = (await form())?.querySelector(".quote-fields");
+  for (const name of ["quoteConsent", "credit", "contactName"])
+    expect(group?.querySelector(`[name="${name}"]`), name).not.toBeNull();
+  const css = readFileSync("static/styles/site.css", "utf8");
+  expect(css).toMatch(
+    /\.feedback-form:has\(input\[name="kind"\]\[value="issue"\]:checked\) \.quote-fields \{\s*display: none;/,
+  );
 });
