@@ -51,9 +51,7 @@ test("it has the Turnstile widget with the public site key, and a no-JavaScript 
   expect(engage.turnstileSiteKey).toMatch(/^0x[0-9A-Za-z_-]+$/);
   expect(doc.querySelector(".cf-turnstile")?.getAttribute("data-sitekey")).toBe(engage.turnstileSiteKey);
   expect(doc.querySelector('script[src^="https://challenges.cloudflare.com/turnstile/"]')).not.toBeNull();
-  expect((await buildSite()).get("/feedback/")).toMatch(
-    /<noscript>[\s\S]*hello@deaftly\.com[\s\S]*<\/noscript>/,
-  );
+  expect((await buildSite()).get("/feedback/")).toMatch(/<noscript>[\s\S]*hello@deaftly\.com[\s\S]*<\/noscript>/);
 });
 
 test("the footer and help still link to it", async () => {
