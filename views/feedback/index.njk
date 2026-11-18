@@ -1,12 +1,56 @@
 ---
 layout: base.njk
 title: Feedback and bug reports
-description: A way to send Deaftly feedback and bug reports is coming soon. Until then, the help pages cover most questions.
+description: Tell us what you think of Deaftly, or report something that isn't working.
 ---
 <div class="wrap section section--tight prose">
 <h1>Feedback and bug reports</h1>
-<p class="lede">A way to send us feedback and report bugs is coming soon.</p>
-<p>We want to hear what's working, what isn't and what you'd like Deaftly to do. We're setting up a proper way to receive your messages, and this page will have a form as soon as it's ready.</p>
-<p>In the meantime, <a href="/help/">the help pages</a> cover using Deaftly, installing and updating, and what to do when something isn't working.</p>
-<p><a class="button" href="/help/">Go to help</a></p>
+<p class="lede">Tell us what's working, what isn't, or what you'd like Deaftly to do.</p>
+<p>Please don't include health details or other personal details in your message. See <a href="/privacy/">privacy</a> for what we keep and for how long.</p>
+
+<noscript><p>This form needs JavaScript for its check that you're not a bot. If you'd rather not turn it on, email hello@deaftly.com instead.</p></noscript>
+
+<form class="feedback-form" action="{{ engage.submissions }}" method="post">
+<input type="hidden" name="product" value="deaftly">
+<input type="hidden" name="source" value="web">
+
+<fieldset>
+<legend>What's this about?</legend>
+<label class="choice"><input type="radio" name="kind" value="feedback" checked> Feedback or an idea</label>
+<label class="choice"><input type="radio" name="kind" value="issue"> Something's not working</label>
+</fieldset>
+
+<label for="message">Your message</label>
+<textarea id="message" name="message" rows="8" maxlength="5000" required aria-describedby="message-hint"></textarea>
+<p id="message-hint" class="muted">Up to 5,000 characters. If something's not working, say what you did and what happened.</p>
+
+<label for="appVersion">App version (optional)</label>
+<input id="appVersion" name="appVersion" type="text" inputmode="decimal" pattern="\d+\.\d+\.\d+" autocomplete="off" aria-describedby="version-hint">
+<p id="version-hint" class="muted">Three numbers, like 0.49.2. It's in your phone's Settings, under Apps, then Deaftly.</p>
+
+<label for="contactEmail">Your email address (optional)</label>
+<input id="contactEmail" name="contactEmail" type="email" maxlength="254" autocomplete="email" aria-describedby="email-hint">
+<p id="email-hint" class="muted">Only if you'd like a reply. Without it, we can't answer you.</p>
+
+<fieldset aria-describedby="quote-hint">
+<legend>Can we quote you? (feedback only, optional)</legend>
+<p id="quote-hint" class="muted">We might share what you said on this site. We never show your email address.</p>
+<label class="choice"><input type="checkbox" name="quoteConsent" value="true"> Yes, you can quote what I said</label>
+<label class="choice"><input type="radio" name="credit" value="anonymous" checked> Don't show my name</label>
+<label class="choice"><input type="radio" name="credit" value="initials"> Show my initials</label>
+<label class="choice"><input type="radio" name="credit" value="name"> Show my name</label>
+<label for="contactName">Your name (optional)</label>
+<input id="contactName" name="contactName" type="text" maxlength="100" autocomplete="name">
+</fieldset>
+
+<div class="trap" aria-hidden="true">
+<label for="hpx">Leave this empty</label>
+<input id="hpx" name="hpx" type="text" tabindex="-1" autocomplete="off">
+</div>
+
+<div class="cf-turnstile" data-sitekey="{{ engage.turnstileSiteKey }}"></div>
+
+<button class="button" type="submit">Send</button>
+</form>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </div>

@@ -39,11 +39,24 @@ The first time you read text with the camera, Deaftly asks for permission. It on
 
 - **No cookies, no analytics and no tracking.** We don't use advertising or analytics tools, and we don't set cookies.
 - **Visiting the site.** Like any website, our hosting provider handles your IP address and the pages you ask for, so it can deliver them and protect the site from attacks. It keeps this only briefly, for those purposes.
-- **Fonts and images** are served from this site, so your visit doesn't send requests to anyone else.
+- **Fonts and images** are served from this site, so your visit doesn't send requests to anyone else. The feedback page is the one exception: it loads a check from our hosting provider that you're not a bot.
 
 ## Feedback
 
-The [feedback form](/feedback/) isn't open yet. Before it opens, we'll update this page to say exactly what it collects, why, where it goes and how long it's kept.
+When you use the [feedback form](/feedback/), it goes to the system One Lone Raven uses to receive feedback for all its products.
+
+<div class="table-scroll" role="region" aria-label="What the feedback form collects" tabindex="0">
+
+| What | Why | How long |
+|---|---|---|
+| Your message, whether it's feedback or a problem, and the app version if you give it | To understand and fix problems, and to improve Deaftly | 12 months after we've dealt with it, or after it was last updated if we haven't. Spam is deleted after 30 days. |
+| Your email address, if you give it | To reply to you | As above, with your message |
+| Your name and whether we can quote you, if you choose to | To show what you said on this site, credited the way you chose | Until you ask us to stop, or your message is deleted |
+| A check that you're not a bot | To keep spam out | Not kept by us |
+
+</div>
+
+Please don't put health details or other personal details in your message.
 
 ## Who's responsible
 
@@ -51,7 +64,7 @@ Deaftly is made by One Lone Raven, which is responsible for your data under UK d
 
 ## Your rights
 
-The app keeps your data on your phone, so you can delete it yourself at any time by deleting your templates or the app. This website doesn't collect personal data from you.
+The app keeps your data on your phone, so you can delete it yourself at any time by deleting your templates or the app. This website only collects personal data if you send feedback. To see, correct or delete it, email support@deaftly.com.
 
 ## Changes
 

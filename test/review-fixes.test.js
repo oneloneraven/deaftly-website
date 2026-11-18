@@ -1,7 +1,6 @@
 import { expect, test } from "vitest";
 import { fetchLatestRelease } from "../lib/github-release.js";
 import { helpPages } from "../lib/help.js";
-import { handleFeedback } from "../src/feedback.js";
 import { buildSite, page } from "./helpers/build.js";
 
 const md = (/** @type {string} */ body) => `---\ntitle: A\norder: 1\n---\n\n# A\n\n${body}\n`;
@@ -36,51 +35,6 @@ test("I4: a help link the site can't resolve fails the build, naming the file", 
   expect(
     helpPages([{ name: "a.md", text: md("[site](https://deaftly.com/) [me](a.md#top) [dl](/download/)") }]),
   ).toHaveLength(1);
-});
-
-const post = (/** @type {Record<string, string>} */ fields, headers = {}) =>
-  new Request("https://deaftly.com/api/feedback", { method: "POST", body: new URLSearchParams(fields), headers });
-const env = { FEEDBACK_TOKEN: "t", FEEDBACK_REPO: "o/r", FEEDBACK_LIMITER: { limit: async () => ({ success: true }) } };
-
-test("I6: a failed send gives the form back with the message kept, escaped", async () => {
-  const fetchImpl = async () => new Response("{}", { status: 500 });
-  const response = await handleFeedback(
-    post({ kind: "bug", message: "It broke <b>badly</b> & more", appVersion: "0.41.1" }),
-    env,
-    fetchImpl,
-  );
-  expect(response.status).toBe(502);
-  const html = await response.text();
-  expect(html).toContain('action="/api/feedback" method="post"');
-  expect(html).toContain("It broke &lt;b&gt;badly&lt;/b&gt; &amp; more</textarea>");
-  expect(html).toContain('value="0.41.1"');
-  expect(html).toMatch(/value="bug" checked/);
-  expect(html).not.toContain("<b>badly</b>");
-});
-
-test("I6: a network error reaching the tracker gives the friendly 502, not a crash", async () => {
-  const fetchImpl = async () => {
-    throw new TypeError("network down");
-  };
-  const response = await handleFeedback(post({ kind: "feedback", message: "hello" }), env, fetchImpl);
-  expect(response.status).toBe(502);
-  expect(await response.text()).not.toContain("network down");
-});
-
-test("I6: a refused post keeps what you typed too", async () => {
-  const response = await handleFeedback(post({ kind: "feedback", message: "kept text", appVersion: "latest" }), env);
-  expect(response.status).toBe(400);
-  expect(await response.text()).toContain("kept text</textarea>");
-});
-
-test("M8: an oversized body is refused before it's read", async () => {
-  const fetchImpl = async () => new Response("{}", { status: 201 });
-  const response = await handleFeedback(
-    post({ kind: "feedback", message: "hi" }, { "Content-Length": "50000" }),
-    env,
-    fetchImpl,
-  );
-  expect(response.status).toBe(413);
 });
 
 test("M1: the thanks page isn't indexed or in the sitemap", async () => {
