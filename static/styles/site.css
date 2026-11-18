@@ -949,6 +949,10 @@ code {
   margin: 0 0 1rem;
 }
 
+.feedback-form:has(input[name="kind"][value="issue"]:checked) .quote-fields {
+  display: none;
+}
+
 .feedback-form .button {
   align-self: flex-start;
 }
