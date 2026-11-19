@@ -38,7 +38,7 @@ The first time you read text with the camera, Deaftly asks for permission. It on
 
 ### Microphone
 
-In a side by side chat, the other person can turn on voice typing to speak their replies. The first time, Deaftly asks for permission to use the microphone. It listens only while voice typing is on, it's the other person's turn and Deaftly is on screen. Speech is turned into text on your phone. The sound is never stored or sent anywhere. You can say no, and you can both still type.
+In a side by side chat, the other person can turn on voice typing to speak their replies. The first time, Deaftly asks for permission to use the microphone. It listens only while voice typing is on, it's the other person's turn and Deaftly is on screen. Speech is turned into text on your device. The sound is never stored or sent anywhere. You can say no, and you can both still type.
 
 ## This website
 
