@@ -24,6 +24,7 @@ Deaftly keeps what you put into it on your phone. We, the people who make Deaftl
 | Chat messages | To hold the conversation | Only while the chat is open. They're deleted when you end the chat, unless you keep it. |
 | Chats you choose to keep | So you can read them or carry on later | Until you delete them or the app |
 | Camera pictures and the text read from them | To add text to a message | Pictures are never stored. Text is kept only if you add it to a template. |
+| What the microphone hears during voice typing, and the text made from it | So the other person in a side by side chat can speak their replies | Sound is never stored. The text becomes a chat message, so it's kept only if you keep the chat. |
 
 </div>
 
@@ -34,6 +35,10 @@ If you've turned on Android backup, your phone can copy your templates, settings
 ### Camera
 
 The first time you read text with the camera, Deaftly asks for permission. It only uses the camera when you choose to read text with it. You can say no and type instead.
+
+### Microphone
+
+In a side by side chat, the other person can turn on voice typing to speak their replies. The first time, Deaftly asks for permission to use the microphone. It listens only while voice typing is on, it's the other person's turn and Deaftly is on screen. Speech is turned into text on your phone. The sound is never stored or sent anywhere. You can say no, and you can both still type.
 
 ## This website
 
