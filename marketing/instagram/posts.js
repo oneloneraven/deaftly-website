@@ -1,5 +1,5 @@
 const getIt = "Deaftly is free for Android. Get it at deaftly.com";
-const tags = "#deaf #deafawareness #hardofhearing #accessibility #android";
+const tags = "#Deaf #DeafCommunity #HardOfHearing #HearingLoss #DeafAwareness";
 
 export const posts = [
   {
