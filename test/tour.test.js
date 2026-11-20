@@ -10,6 +10,7 @@ test("the tour follows the evening out, step by step", async () => {
     "face-to-face",
     "type-and-show",
     "show",
+    "listen-for-me",
     "templates",
     "camera",
     "side-by-side",
@@ -20,7 +21,7 @@ test("the tour follows the evening out, step by step", async () => {
 test("every screenshot has alt text and a size, and every caption is real text", async () => {
   const doc = await page("/tour/");
   const images = [...doc.querySelectorAll("main img")];
-  expect(images.length).toBe(8);
+  expect(images.length).toBe(9);
   for (const image of images) {
     expect(image.getAttribute("alt")?.length, image.getAttribute("src") ?? "").toBeGreaterThan(20);
     expect(image.getAttribute("width")).toBe("390");
