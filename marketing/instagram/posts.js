@@ -208,6 +208,95 @@ export const posts = [
       "Add it once in Settings and Deaftly fills it in for you. Your names stay on your phone.",
     ],
   },
+  {
+    id: "listen-for-me",
+    feature: "Listen for me",
+    headline: "Read what they say.",
+    cover: "screens/listen.webp",
+    slides: [
+      {
+        type: "screen",
+        src: "screens/listen.webp",
+        caption: "Their words appear as they speak",
+        alt: "Listen for me. At the top, upside down for the host, the words I'm deaf. Please speak to my phone and I'll read what you say. Below, what the host said: Hi, welcome in. A table for two by the window? Of course. Follow me, it's just over here. A live line reads Can I get you any drinks while.",
+      },
+      {
+        type: "text",
+        heading: "For when they'd rather talk",
+        paragraphs: [
+          "Open Listen for me and show them the message at the top: I'm deaf. Please speak to my phone and I'll read what you say.",
+          "Their words appear on your screen as they speak. It all happens on your phone, and the audio isn't kept.",
+        ],
+      },
+      {
+        type: "text",
+        heading: "Turn it, pause it, reply",
+        paragraphs: [
+          "Turn the message to face them, or the right way up to hold it out.",
+          "Pause listening whenever you like.",
+          "Want to reply? Tap Continue side by side, and what they said comes with you.",
+        ],
+      },
+    ],
+    caption: [
+      "Some people would rather just talk. Open Listen for me and Deaftly turns what they say into text on your phone, so you can read along.",
+      "It all happens on your phone and the audio isn't kept. When you want to reply, carry on side by side.",
+    ],
+  },
+  {
+    id: "shortcuts",
+    feature: "Tip",
+    headline: "Get there faster.",
+    cover: "screens/add-to-home-screen.webp",
+    coverFrom: 0.25,
+    slides: [
+      {
+        type: "longpress",
+        caption: "Long-press the Deaftly icon",
+        shortcuts: [
+          ["Start typing", "keyboard"],
+          ["Face to face", "faceToFace"],
+          ["Side by side", "sideBySide"],
+          ["Listen for me", "mic"],
+        ],
+        alt: "The Deaftly app icon with a menu above it listing Start typing, Face to face, Side by side and Listen for me.",
+      },
+      {
+        type: "text",
+        heading: "Jump straight in",
+        paragraphs: [
+          "Long-press the Deaftly icon on your home screen or in your apps list, then tap where you want to go.",
+          "Drag one out of the list to put it on your home screen as its own icon.",
+        ],
+      },
+      {
+        type: "screen",
+        src: "screens/add-to-home-screen.webp",
+        caption: "Or use its information button",
+        alt: "The Listen for me information dialog on Deaftly's home screen, with an Add to home screen button under the explanation, and Close and Start below.",
+      },
+      {
+        type: "steps",
+        heading: "Add one to your home screen",
+        steps: [
+          "On Deaftly's home screen, tap the information button on Start typing, Face to face, Side by side or Listen for me.",
+          "Tap Add to home screen.",
+          "Confirm, and it's on your home screen.",
+        ],
+      },
+      {
+        type: "text",
+        heading: "If you don't see them",
+        paragraphs: [
+          "Some phones don't offer shortcuts. If they don't appear, your phone's home screen doesn't support them.",
+        ],
+      },
+    ],
+    caption: [
+      "Tip: open the part of Deaftly you need in one tap.",
+      "Long-press the Deaftly icon for Start typing, Face to face, Side by side and Listen for me. To keep one on your home screen, drag it out of the list, or tap its information button in Deaftly and then Add to home screen.",
+    ],
+  },
 ];
 
 export const cta = { heading: "Deaftly is free.", line: "Get it for Android at", url: "deaftly.com" };
