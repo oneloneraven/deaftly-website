@@ -191,7 +191,7 @@ export const posts = [
         type: "screen",
         src: "screens/fill-with-name.webp",
         caption: "It's already there when you check in",
-        alt: "The Check in template reading: Hi! I'm deaf. I'd like to check in. My name is Keisha Grant. Please write it down. A Show button sits below.",
+        alt: "The Check in template reading: Hi! I'm deaf. I'd like to check in. My name is Keisha Grant. If you need to reply, please type here. A Show button sits below.",
       },
       {
         type: "text",
