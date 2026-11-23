@@ -50,7 +50,7 @@ test("the privacy page names the controller and how to contact them", async () =
 test("the privacy page covers the app, Android backup, the site and the feedback form", async () => {
   const body = await text("/privacy/");
   for (const phrase of [
-    /on your phone/i,
+    /on your device/i,
     /Android backup/i,
     /templates/i,
     /chat/i,

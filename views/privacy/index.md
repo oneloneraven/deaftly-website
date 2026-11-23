@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Privacy
-description: What the Deaftly app keeps on your phone, what Android backup copies, and what this website and its feedback form collect, why, and for how long.
+description: What the Deaftly app keeps on your device, what Android backup copies, and what this website and its feedback form collect, why, and for how long.
 ---
 
 <div class="wrap section section--tight prose">
@@ -12,7 +12,7 @@ This page explains what the Deaftly app keeps, what this website collects, why, 
 
 ## The app
 
-Deaftly keeps what you put into it on your phone. We, the people who make Deaftly, don't receive any of it.
+Deaftly keeps what you put into it on your device. We, the people who make Deaftly, don't receive any of it.
 
 <div class="table-scroll" role="region" aria-label="What the app keeps" tabindex="0">
 
@@ -30,7 +30,7 @@ Deaftly keeps what you put into it on your phone. We, the people who make Deaftl
 
 ### Android backup
 
-If you've turned on Android backup, your phone can copy your templates, settings and kept chats to your backup and restore them on a new phone. That's a service you choose and control in your phone's settings. Deaftly doesn't set it up or read it, and we can't see it. Kept chats can include anything you and the other person wrote, such as health details.
+If you've turned on Android backup, your device can copy your templates, settings and kept chats to your backup and restore them on a new device. That's a service you choose and control in your device's settings. Deaftly doesn't set it up or read it, and we can't see it. Kept chats can include anything you and the other person wrote, such as health details.
 
 ### Camera
 
@@ -69,7 +69,7 @@ Deaftly is made by One Lone Raven, which is responsible for your data under UK d
 
 ## Your rights
 
-The app keeps your data on your phone, so you can delete it yourself at any time by deleting your templates or the app. This website only collects personal data if you send feedback. To see, correct or delete it, email support@deaftly.com.
+The app keeps your data on your device, so you can delete it yourself at any time by deleting your templates or the app. This website only collects personal data if you send feedback. To see, correct or delete it, email support@deaftly.com.
 
 ## Changes
 

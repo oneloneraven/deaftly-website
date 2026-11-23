@@ -11,10 +11,10 @@ Communicating at the doctor's as a deaf person can go wrong before the appointme
 
 Use the **At the doctor's** template. Fill in your name, your appointment time, who it's with and how you'll communicate, then show it at reception:
 
-> Hi! I'm deaf. My name is **Marcus Campbell**. I have an appointment at **10:30** with **Dr Shah**. I prefer to communicate by **typing on my phone**. If you need to reply, please **write it down** or **type on my phone**.
+> Hi! I'm deaf. My name is **Marcus Campbell**. I have an appointment at **10:30** with **Dr Shah**. I prefer to communicate by **typing**. If you need to reply, please **write it down** or **type here**.
 
 ## During the appointment
 
-**Side by side** lets you and the doctor take turns typing on one phone. Each of you gets your own colour, laid out like a script, so it's easy to look back at what was said. Clear prompts show the doctor where to type.
+**Side by side** lets you and the doctor take turns typing on one device. Each of you gets your own colour, laid out like a script, so it's easy to look back at what was said. Clear prompts show the doctor where to type.
 
-If you'd rather keep hold of your phone, **Face to face** turns your words towards them as you type.
+If you'd rather keep hold of your device, **Face to face** turns your words towards them as you type.

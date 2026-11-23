@@ -11,7 +11,7 @@ Ordering food as a deaf person can mean pointing at the menu and hoping, or a qu
 
 Use the **Order food** template. Tap the dish, then point the **camera** at the menu and tap the lines you want. You can add more than one dish, and Deaftly joins them for you:
 
-> Hi! I'm deaf. Could I have **Pasta arrabbiata** and **Garlic bread** please? If you have a question, please type it on my phone.
+> Hi! I'm deaf. Could I have **Pasta arrabbiata** and **Garlic bread** please? If you have a question, please type it here.
 
 Freeze the picture to make picking easier, and turn on the torch in a dim restaurant.
 
@@ -21,7 +21,7 @@ The **Food allergy** template says what you're allergic to and asks whether they
 
 ## When they ask a question
 
-Questions like “spicy or mild?” or “eat in or take away?” are where it usually breaks down. Tap **Continue as chat** and pass the phone over. **Side by side** shows them where to type, and you can reply straight away.
+Questions like “spicy or mild?” or “eat in or take away?” are where it usually breaks down. Tap **Continue as chat** and pass it over. **Side by side** shows them where to type, and you can reply straight away.
 
 ## Paying
 
