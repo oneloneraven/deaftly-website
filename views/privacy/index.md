@@ -12,7 +12,7 @@ This page explains what the Deaftly app keeps, what this website collects, why, 
 
 ## The app
 
-Deaftly keeps what you put into it on your device. We, the people who make Deaftly, don't receive any of it.
+Deaftly keeps what you put into it on your device. We, the people who make Deaftly, don't receive any of it, unless you send us a message from the app (see [Feedback](#feedback)).
 
 <div class="table-scroll" role="region" aria-label="What the app keeps" tabindex="0">
 
@@ -48,16 +48,17 @@ In a side by side chat, the other person can turn on voice typing to speak their
 
 ## Feedback
 
-When you use the [feedback form](/feedback/), it goes to the system One Lone Raven uses to receive feedback for all its products.
+When you use the [feedback form](/feedback/), or **Report an issue** or **Tell us what you think** in the app, your message goes to the system One Lone Raven uses to receive feedback for all its products. The app sends it only when you tap Send. That's the only time the app connects to the internet.
 
 <div class="table-scroll" role="region" aria-label="What the feedback form collects" tabindex="0">
 
 | What | Why | How long |
 |---|---|---|
-| Your message, whether it's feedback or a problem, and the app version if you give it | To understand and fix problems, and to improve Deaftly | 12 months after we've dealt with it, or after it was last updated if we haven't. Spam is deleted after 30 days. |
+| Your message, whether it's feedback or a problem, and the app version. The app adds its version for you; on the website, it's sent only if you give it | To understand and fix problems, and to improve Deaftly | 12 months after we've dealt with it, or after it was last updated if we haven't. Spam is deleted after 30 days. |
 | Your email address, if you give it | To reply to you | As above, with your message |
 | Your name and whether we can quote you, if you choose to | To show what you said on this site, credited the way you chose | Until you ask us to stop, or your message is deleted |
-| A check that you're not a bot | To keep spam out | Not kept by us |
+| A check that you're not a bot (website only) | To keep spam out | Not kept by us |
+| The internet address your message comes from | To limit how many messages can be sent, which keeps spam out | Not kept with your message |
 
 </div>
 
