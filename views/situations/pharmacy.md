@@ -11,13 +11,13 @@ At the pharmacy counter there can be a queue, a screen between you and the pharm
 
 Use the **Pharmacy** template. Fill in who it's for, then show it at the counter:
 
-> Hi! I'm deaf. I'm collecting a prescription for **Layla Hassan**. If you need to reply, please **type on my phone**.
+> Hi! I'm deaf. I'm collecting a prescription for **Layla Hassan**. If you need to reply, please **type here**.
 
 ## Getting medicine names right
 
 Medicine names are long and easy to get wrong. Make your own template with a gap filled by the **camera**, then point it at the label, box or letter and tap the name:
 
-> Can you tell me how to take **flucloxacillin**? To reply, please **type on my phone**.
+> Can you tell me how to take **flucloxacillin**? To reply, please **type here**.
 
 <figure class="situation__screen">
 <img src="{{ "/screenshots/pharmacy-camera.webp" | asset }}" width="390" height="600" loading="lazy" alt="The camera pointed at a pharmacy label for Layla Hassan, with the line Flucloxacillin 500mg Capsules selected and shown in the Selected text box.">
@@ -26,4 +26,4 @@ Medicine names are long and easy to get wrong. Make your own template with a gap
 
 ## Asking questions
 
-If the pharmacist needs to ask you something, **Side by side** lets you take turns typing on one phone. If you'd rather keep hold of your phone, **Face to face** turns your words towards them as you type.
+If the pharmacist needs to ask you something, **Side by side** lets you take turns typing on one device. If you'd rather keep hold of your device, **Face to face** turns your words towards them as you type.
