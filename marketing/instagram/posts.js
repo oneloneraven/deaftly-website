@@ -95,21 +95,21 @@ export const posts = [
         type: "text",
         heading: "No waiting for you to finish",
         paragraphs: [
-          "Hold your phone and type. Your words appear at the top of the screen, facing the person opposite, so they read as you go.",
-          "You keep a secure grip on your phone the whole time.",
-          "When they want to reply, tap Continue side by side and pass them the phone.",
+          "Hold your device and type. Your words appear at the top of the screen, facing the person opposite, so they read as you go.",
+          "You keep a secure grip on your device the whole time.",
+          "When they want to reply, tap Continue side by side and pass it over.",
         ],
       },
     ],
     caption: [
       "Someone at the door? Open Face to face and start typing.",
-      "Your words appear upside down at the top of the screen, facing them, so they read along as you type instead of waiting for you to finish. And you never let go of your phone.",
+      "Your words appear upside down at the top of the screen, facing them, so they read along as you type instead of waiting for you to finish. And you never let go of your device.",
     ],
   },
   {
     id: "side-by-side",
     feature: "Side by side",
-    headline: "Pass the phone. Take turns.",
+    headline: "Pass it over. Take turns.",
     cover: "screens/side-by-side.webp",
     coverFrom: 0.3,
     slides: [
@@ -121,7 +121,7 @@ export const posts = [
       },
       {
         type: "text",
-        heading: "A conversation on one phone",
+        heading: "A conversation on one device",
         paragraphs: [
           "Flip the switch to change turns. A prompt shows them where to type.",
           "Swap sides to match where you're each standing.",
@@ -133,12 +133,12 @@ export const posts = [
         heading: "They can speak instead",
         paragraphs: [
           "On their turn, the other person can tap the microphone and talk. Their words appear in the chat as text.",
-          "It turns speech into text on your phone, and the audio isn't kept.",
+          "It turns speech into text on your device, and the audio isn't kept.",
         ],
       },
     ],
     caption: [
-      "For a proper back and forth, use Side by side. Pass the phone and take turns, with each of you in your own colour so it's easy to follow who said what.",
+      "For a proper back and forth, use Side by side. Pass it over and take turns, with each of you in your own colour so it's easy to follow who said what.",
       "On their turn, they can tap the microphone and speak, and their words appear as text.",
     ],
   },
@@ -191,7 +191,7 @@ export const posts = [
         type: "screen",
         src: "screens/fill-with-name.webp",
         caption: "It's already there when you check in",
-        alt: "The Check in template reading: Hi! I'm deaf. I'd like to check in. My name is Keisha Grant. Please type on my phone. A Show button sits below.",
+        alt: "The Check in template reading: Hi! I'm deaf. I'd like to check in. My name is Keisha Grant. Please write it down. A Show button sits below.",
       },
       {
         type: "text",
@@ -199,13 +199,13 @@ export const posts = [
         paragraphs: [
           "Add your first and last name in Settings and Deaftly fills them into templates like Check in.",
           "If the name on your documents is different, add your legal name too.",
-          "Your names stay on this phone.",
+          "Your names stay on this device.",
         ],
       },
     ],
     caption: [
       "Checking in, seeing the doctor, picking up a prescription: they all start with your name.",
-      "Add it once in Settings and Deaftly fills it in for you. Your names stay on your phone.",
+      "Add it once in Settings and Deaftly fills it in for you. Your names stay on your device.",
     ],
   },
   {
@@ -218,14 +218,14 @@ export const posts = [
         type: "screen",
         src: "screens/listen.webp",
         caption: "Their words appear as they speak",
-        alt: "Listen for me. At the top, upside down for the host, the words I'm deaf. Please speak to my phone and I'll read what you say. Below, what the host said: Hi, welcome in. A table for two by the window? Of course. Follow me, it's just over here. A live line reads Can I get you any drinks while.",
+        alt: "Listen for me. At the top, upside down for the host, the words I'm deaf. Please speak and I'll read what you say here. Below, what the host said: Hi, welcome in. A table for two by the window? Of course. Follow me, it's just over here. A live line reads Can I get you any drinks while.",
       },
       {
         type: "text",
         heading: "For when they'd rather talk",
         paragraphs: [
-          "Open Listen for me and show them the message at the top: I'm deaf. Please speak to my phone and I'll read what you say.",
-          "Their words appear on your screen as they speak. It all happens on your phone, and the audio isn't kept.",
+          "Open Listen for me and show them the message at the top: I'm deaf. Please speak and I'll read what you say here.",
+          "Their words appear on your screen as they speak. It all happens on your device, and the audio isn't kept.",
         ],
       },
       {
@@ -239,8 +239,8 @@ export const posts = [
       },
     ],
     caption: [
-      "Some people would rather just talk. Open Listen for me and Deaftly turns what they say into text on your phone, so you can read along.",
-      "It all happens on your phone and the audio isn't kept. When you want to reply, carry on side by side.",
+      "Some people would rather just talk. Open Listen for me and Deaftly turns what they say into text on your device, so you can read along.",
+      "It all happens on your device and the audio isn't kept. When you want to reply, carry on side by side.",
     ],
   },
   {
@@ -288,7 +288,7 @@ export const posts = [
         type: "text",
         heading: "If you don't see them",
         paragraphs: [
-          "Some phones don't offer shortcuts. If they don't appear, your phone's home screen doesn't support them.",
+          "Some devices don't offer shortcuts. If they don't appear, your device's home screen doesn't support them.",
         ],
       },
     ],
