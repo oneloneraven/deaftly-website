@@ -1,5 +1,5 @@
 # Engage replies to Deaftly feedback from hello@deaftly.com through Cloudflare Email Sending.
-# Onboarding the apex adds the cf-bounce MX, SPF and DKIM records; Proton's apex MX and SPF stay as they are.
+# Onboarding the apex adds the cf-bounce MX, SPF and DKIM records.
 resource "cloudflare_email_sending_subdomain" "app" {
   zone_id = data.cloudflare_zone.app.id
   name    = var.app_zone_name
@@ -18,10 +18,9 @@ resource "cloudflare_dns_record" "dmarc" {
   ttl     = 1
   content = "\"v=DMARC1; p=quarantine; pct=100; adkim=s; aspf=s\""
 }
-<<<<<<< HEAD
 
 # hello@ and support@ go to Engage, and so do its signed reply+…@ addresses: with subaddressing on, the reply@ rule matches them.
-# Proton's apex MX, SPF and DKIM records must be deleted in the dashboard before this applies (they were never in OpenTofu).
+# Enabling it adds the apex MX and SPF; Proton's legacy records were deleted in the dashboard first (they were never in OpenTofu).
 resource "cloudflare_email_routing_dns" "app" {
   zone_id = data.cloudflare_zone.app.id
   name    = var.app_zone_name
@@ -54,5 +53,3 @@ resource "cloudflare_email_routing_catch_all" "app" {
 
   depends_on = [cloudflare_email_routing_dns.app]
 }
-=======
->>>>>>> origin/main
