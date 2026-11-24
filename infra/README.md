@@ -8,7 +8,8 @@ DMARC record. The Worker itself is deployed by wrangler from the release workflo
 The only things outside OpenTofu are the state bucket (it must exist before
 OpenTofu can use it), Worker runtime secrets, the CI credentials below, the
 records Email Sending adds when it onboards the apex (the `cf-bounce` MX and
-SPF, and its DKIM key).
+SPF, and its DKIM key) and the ones Email Routing adds when it's enabled (the
+apex MX, SPF and DKIM).
 
 State lives in the R2 bucket `deaftly-website-tfstate`, never in git.
 
