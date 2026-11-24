@@ -8,3 +8,9 @@ variable "app_zone_name" {
   type        = string
   default     = "deaftly.com"
 }
+
+variable "engage_worker_name" {
+  description = "The Engage Worker that receives deaftly.com mail."
+  type        = string
+  default     = "engage-production"
+}

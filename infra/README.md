@@ -2,13 +2,14 @@
 
 Everything provisionable is managed here with [OpenTofu](https://opentofu.org), the open-source fork of Terraform (same HCL, providers and state format): DNS, TLS and HSTS,
 DNSSEC, CAA, security headers and cache rules for `deaftly.com`, Email
-Sending on the apex (Engage replies from `hello@deaftly.com`) and the DMARC
-record. The Worker itself is deployed by wrangler from the release workflows.
+Sending on the apex (Engage replies from `hello@deaftly.com`), Email Routing
+(`hello@`, `support@` and Engage's `reply+…@` addresses go to Engage) and the
+DMARC record. The Worker itself is deployed by wrangler from the release workflows.
 The only things outside OpenTofu are the state bucket (it must exist before
 OpenTofu can use it), Worker runtime secrets, the CI credentials below, the
 records Email Sending adds when it onboards the apex (the `cf-bounce` MX and
-SPF, and its DKIM key), and Proton's mail records (apex MX and SPF, DKIM
-CNAMEs and the `pm-verification` TXT) for the `support@` alias.
+SPF, and its DKIM key) and the ones Email Routing adds when it's enabled (the
+apex MX, SPF and DKIM).
 
 State lives in the R2 bucket `deaftly-website-tfstate`, never in git.
 
@@ -43,8 +44,8 @@ account and, for zone permissions, to `deaftly.com` only.
 |---|---|---|
 | Preview | `CLOUDFLARE_PREVIEW_TOKEN` (repository) | Account: Workers Scripts Edit, Account Settings Read |
 | Deploy | `CLOUDFLARE_DEPLOY_TOKEN` (environments `production`, and `beta` if used) | Account: Workers Scripts Edit, Account Settings Read. Zone: Workers Routes Edit |
-| Infra plan | `CLOUDFLARE_INFRA_PLAN_TOKEN` (repository) | Account: Workers R2 Storage Read, Transform Rules Read. Zone: DNS Read, Zone Settings Read, Zone WAF Read, Cache Settings Read |
-| Infra apply | `CLOUDFLARE_INFRA_APPLY_TOKEN` (environment `infra`) | Account: Workers R2 Storage Edit, Transform Rules Edit. Zone: DNS Edit, Zone Settings Edit, Zone WAF Edit, Cache Settings Edit |
+| Infra plan | `CLOUDFLARE_INFRA_PLAN_TOKEN` (repository) | Account: Workers R2 Storage Read, Transform Rules Read. Zone: DNS Read, Zone Settings Read, Zone WAF Read, Cache Settings Read, Email Routing Rules Read, Email Sending Read |
+| Infra apply | `CLOUDFLARE_INFRA_APPLY_TOKEN` (environment `infra`) | Account: Workers R2 Storage Edit, Transform Rules Edit. Zone: DNS Edit, Zone Settings Edit, Zone WAF Edit, Cache Settings Edit, Email Routing Rules Edit, Email Sending Edit |
 
 Transform Rules is account-scoped, so the infra tokens' Transform Rules permission covers every zone in the account, not just `deaftly.com`.
 
