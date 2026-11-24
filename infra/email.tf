@@ -18,6 +18,7 @@ resource "cloudflare_dns_record" "dmarc" {
   ttl     = 1
   content = "\"v=DMARC1; p=quarantine; pct=100; adkim=s; aspf=s\""
 }
+<<<<<<< HEAD
 
 # hello@ and support@ go to Engage, and so do its signed reply+…@ addresses: with subaddressing on, the reply@ rule matches them.
 # Proton's apex MX, SPF and DKIM records must be deleted in the dashboard before this applies (they were never in OpenTofu).
@@ -53,3 +54,5 @@ resource "cloudflare_email_routing_catch_all" "app" {
 
   depends_on = [cloudflare_email_routing_dns.app]
 }
+=======
+>>>>>>> origin/main
