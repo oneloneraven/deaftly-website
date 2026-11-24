@@ -11,7 +11,7 @@ test("one H1 says what Deaftly is for", async () => {
   expect(text(headings[0])).toBe("Communicate with hearing people quickly and easily");
 });
 
-test("the hero shows all four features side by side, without Show and Chat groups", async () => {
+test("the hero shows all five features side by side, without Show and Chat groups", async () => {
   const doc = await page("/");
   const features = doc.querySelector(".hero-features");
   expect([...(features?.querySelectorAll(":scope > a h2") ?? [])].map(text)).toEqual([
@@ -19,8 +19,9 @@ test("the hero shows all four features side by side, without Show and Chat group
     "Templates",
     "Face to face",
     "Side by side",
+    "Listen for me",
   ]);
-  expect(features?.querySelectorAll("h2").length).toBe(4);
+  expect(features?.querySelectorAll("h2").length).toBe(5);
   expect(text(features?.querySelector('a[href="/tour/#templates"]'))).toContain("reading text live with the camera");
   expect(
     [...(features?.querySelectorAll(".feature-tile img") ?? [])].map(img => img.getAttribute("src")?.split("?")[0]),
@@ -29,6 +30,7 @@ test("the hero shows all four features side by side, without Show and Chat group
     "/screenshots/fill.webp",
     "/screenshots/face-to-face.webp",
     "/screenshots/side-by-side.webp",
+    "/screenshots/listen.webp",
   ]);
 });
 
