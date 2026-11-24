@@ -5,7 +5,7 @@ resource "cloudflare_email_sending_subdomain" "app" {
   name    = var.app_zone_name
 }
 
-# Made in the dashboard alongside Proton's records; imported so it isn't duplicated (two DMARC records void both).
+# Made in the dashboard; imported so it isn't duplicated (two DMARC records void both). Reject: only Email Sending sends as deaftly.com.
 import {
   to = cloudflare_dns_record.dmarc
   id = "${data.cloudflare_zone.app.id}/9929fcb97a0bfcf2a71b2ee98a3cee3b"
@@ -16,7 +16,7 @@ resource "cloudflare_dns_record" "dmarc" {
   name    = "_dmarc.${var.app_zone_name}"
   type    = "TXT"
   ttl     = 1
-  content = "\"v=DMARC1; p=quarantine; pct=100; adkim=s; aspf=s\""
+  content = "\"v=DMARC1; p=reject; pct=100; adkim=s; aspf=s\""
 }
 
 # hello@ and support@ go to Engage, and so do its signed reply+…@ addresses: with subaddressing on, the reply@ rule matches them.
