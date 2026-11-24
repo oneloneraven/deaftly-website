@@ -22,7 +22,7 @@ One Lone Raven. Contact: support@deaftly.com, as published on the privacy page.
 
 The site sets no cookies and runs no analytics or tracking.
 
-The feedback form posts straight to Engage (ADR-0005). Engage's own record of processing covers what it stores, for how long and who sees it. Deaftly's product settings use the default 12-month retention.
+The feedback form posts straight to Engage (ADR-0005), and Email Routing hands mail for `hello@`, `support@` and Engage's signed `reply+…@` addresses to Engage's Worker; anything else sent to deaftly.com is dropped. Engage replies from `hello@deaftly.com` through Cloudflare Email Sending. Engage's own record of processing covers what it stores, for how long and who sees it. Deaftly's product settings use the default 12-month retention.
 
 ## Gaps to settle
 

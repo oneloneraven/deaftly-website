@@ -62,6 +62,8 @@ When you use the [feedback form](/feedback/), or **Report an issue** or **Tell u
 
 </div>
 
+If you email hello@deaftly.com or support@deaftly.com, your email goes to the same system and is kept the same way as a message from the form: what you wrote, your email address and the name your email shows. Our replies come from hello@deaftly.com.
+
 Please don't put health details or other personal details in your message.
 
 ## Who's responsible

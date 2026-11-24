@@ -12,6 +12,7 @@ Describe the components, where each runs, and how data flows between them.
 | Boundary | Between | What crosses it | Controls |
 |---|---|---|---|
 | Visitor → Engage (feedback form) | Anyone on the internet and Engage | Form posts: kind, message, optional email, name, quote consent and app version | Posted straight to Engage, which validates, rate-limits, checks Turnstile and the honeypot; see Engage's threat model. The feedback page's CSP allows only Turnstile and posting to Engage |
+| Sender → Engage (email) | Anyone who emails deaftly.com and Engage | Mail to `hello@`, `support@` and `reply+…@` | Cloudflare Email Routing hands it to Engage's Worker and drops every other address; Engage records SPF, DKIM and DMARC results and checks the signature on `reply+…` addresses; see Engage's threat model. DMARC on deaftly.com stops others sending as the domain |
 | Build → GitHub API | CI builds and the app repository | Release list and help files, read with the workflow's token | Read-only; the build fails on any error instead of shipping a broken download |
 | Release job → GitHub API | `release.yml` and the release GitHub App | Short-lived App token (Contents and Workflows: read and write) to push release tags and create releases | Token minted only in the release job and scoped to this repository; App installed on this repository only; private key held as a repository secret |
 
