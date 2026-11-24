@@ -21,9 +21,9 @@ resource "cloudflare_dns_record" "dmarc" {
 
 # hello@ and support@ go to Engage, and so do its signed reply+…@ addresses: with subaddressing on, the reply@ rule matches them.
 # Enabling it adds the apex MX and SPF; Proton's legacy records were deleted in the dashboard first (they were never in OpenTofu).
+# No name: the API takes it as a subdomain and rejects the apex ("must be a subdomains of deaftly.com").
 resource "cloudflare_email_routing_dns" "app" {
   zone_id = data.cloudflare_zone.app.id
-  name    = var.app_zone_name
 }
 
 resource "cloudflare_email_routing_settings" "app" {
