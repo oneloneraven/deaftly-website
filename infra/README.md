@@ -1,10 +1,14 @@
 # Infrastructure
 
 Everything provisionable is managed here with [OpenTofu](https://opentofu.org), the open-source fork of Terraform (same HCL, providers and state format): DNS, TLS and HSTS,
-DNSSEC, CAA, security headers and cache rules for `deaftly.com`. The
-Worker itself is deployed by wrangler from the release workflows. The only
-things outside OpenTofu are the state bucket (it must exist before OpenTofu
-can use it), Worker runtime secrets and the CI credentials below.
+DNSSEC, CAA, security headers and cache rules for `deaftly.com`, Email
+Sending on the apex (Engage replies from `hello@deaftly.com`) and the DMARC
+record. The Worker itself is deployed by wrangler from the release workflows.
+The only things outside OpenTofu are the state bucket (it must exist before
+OpenTofu can use it), Worker runtime secrets, the CI credentials below, the
+records Email Sending adds when it onboards the apex (the `cf-bounce` MX and
+SPF, and its DKIM key), and Proton's mail records (apex MX and SPF, DKIM
+CNAMEs and the `pm-verification` TXT) for the `support@` alias.
 
 State lives in the R2 bucket `deaftly-website-tfstate`, never in git.
 
