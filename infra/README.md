@@ -26,9 +26,9 @@ State lives in the R2 bucket `deaftly-website-tfstate`, never in git.
 ## Setup
 
 1. The zone `deaftly.com` is active on Cloudflare.
-2. Create the CI tokens below, the R2 state credentials, and the GitHub
-   secrets and variables: `node <plugin>/skills/bootstrap/scripts/secrets.mjs cloudflare-tokens <project dir>`
-   does the CI tokens, or follow this page by hand.
+2. Create the CI tokens, the R2 state credentials, and the GitHub secrets
+   and variables: `node <plugin>/skills/bootstrap/scripts/secrets.mjs cloudflare-tokens <project dir>`
+   does the CI tokens. Their permissions are kept in the private vault.
 3. Run "Bootstrap OpenTofu state bucket".
 4. Run "Infra" (dispatch it, or merge a change under `infra/`).
 5. Add the DS record from `tofu output app_dnssec_ds_record` at the
