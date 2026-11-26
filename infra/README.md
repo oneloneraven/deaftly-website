@@ -37,38 +37,11 @@ State lives in the R2 bucket `deaftly-website-tfstate`, never in git.
 
 ### Cloudflare API tokens
 
-Create each as an account-owned token with a one-year expiry, scoped to this
-account and, for zone permissions, to `deaftly.com` only.
-
-| Token | GitHub secret | Permissions |
-|---|---|---|
-| Preview | `CLOUDFLARE_PREVIEW_TOKEN` (repository) | Account: Workers Scripts Edit, Account Settings Read |
-| Deploy | `CLOUDFLARE_DEPLOY_TOKEN` (environments `production`, and `beta` if used) | Account: Workers Scripts Edit, Account Settings Read. Zone: Workers Routes Edit |
-| Infra plan | `CLOUDFLARE_INFRA_PLAN_TOKEN` (repository) | Account: Workers R2 Storage Read, Transform Rules Read. Zone: DNS Read, Zone Settings Read, Zone WAF Read, Cache Settings Read, Email Routing Rules Read, Email Sending Read |
-| Infra apply | `CLOUDFLARE_INFRA_APPLY_TOKEN` (environment `infra`) | Account: Workers R2 Storage Edit, Transform Rules Edit. Zone: DNS Edit, Zone Settings Edit, Zone WAF Edit, Cache Settings Edit, Email Routing Rules Edit, Email Sending Edit |
-
-Transform Rules is account-scoped, so the infra tokens' Transform Rules permission covers every zone in the account, not just `deaftly.com`.
-
-If a plan or apply fails with an authorisation error, the error names the
-missing permission: add exactly that one.
-
-Never add a per-Worker granular policy to an existing token by editing it in
-place: such writes have failed or silently left a token with no policies.
-Create a new token instead. Check a token's real contents with
-`GET /accounts/<account id>/tokens/<token id>`, not the dashboard labels.
+This section is kept in the private vault.
 
 ### R2 state credentials
 
-`node <plugin>/skills/bootstrap/scripts/secrets.mjs cloudflare-r2 <project dir>` creates both and sets the secrets. By hand, create two R2 API tokens (R2 → Manage R2 API Tokens), both limited to the
-`deaftly-website-tfstate` bucket:
-
-| Token | Permission | GitHub secrets |
-|---|---|---|
-| State read-write | Object Read & Write | `TF_STATE_ACCESS_KEY_ID`, `TF_STATE_SECRET_ACCESS_KEY` (environment `infra`) |
-| State read-only | Object Read only | `TF_STATE_READ_ACCESS_KEY_ID`, `TF_STATE_READ_SECRET_ACCESS_KEY` (repository, for PR plans) |
-
-PR plans run with the read-only pair, so code in a pull request can't
-rewrite state.
+This section is kept in the private vault.
 
 ### OpenTofu version
 
@@ -83,10 +56,7 @@ version locally.
 
 ### Worker secrets
 
-Set each runtime secret once per environment with
-`pnpm exec wrangler secret put <NAME> --env <env>`. Setting one environment
-never sets another. Local development reads them from `.dev.vars`, which is
-gitignored.
+This section is kept in the private vault.
 
 ## Disaster recovery
 
