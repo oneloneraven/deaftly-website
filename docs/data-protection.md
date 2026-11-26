@@ -29,4 +29,4 @@ The feedback form posts straight to Engage (ADR-0005), and Email Routing hands m
 
 ## Security measures
 
-See the [threat model](threat-model.md) and [privacy rules](privacy.md).
+See the threat model (in the vault) and [privacy rules](privacy.md).

@@ -9,8 +9,10 @@ old one's status becomes "Superseded by ADR-NNNN".
 
 | ADR | Decision |
 |---|---|
-| [0001](0001-record-architecture-decisions.md) | Record architecture decisions |
-| [0002](0002-screen-dependencies-against-bds-boycott-lists.md) | Screen dependencies and vendors against BDS boycott lists |
-| [0003](0003-a-static-eleventy-site-served-by-a-worker.md) | A static Eleventy site, served by a Cloudflare Worker |
-| [0004](0004-feedback-goes-to-a-private-issue-tracker.md) | Feedback goes to a private issue tracker (in the vault) |
-| [0005](0005-feedback-goes-to-engage.md) | Feedback goes to Engage |
+| 0001 | Record architecture decisions |
+| 0002 | Screen dependencies and vendors against BDS boycott lists |
+| 0003 | A static Eleventy site, served by a Cloudflare Worker |
+| 0004 | Feedback goes to a private issue tracker |
+| 0005 | Feedback goes to Engage |
+
+Every ADR is kept in the private vault, at `oneloneraven-vault/deaftly-website/adr/`. This index lists their numbers and titles only.
