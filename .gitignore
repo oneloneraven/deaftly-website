@@ -1,4 +1,4 @@
-.bootstrap/
+.bootstrap/*
 .superpowers/
 .dev.vars
 .env*
@@ -26,3 +26,4 @@ local.properties
 *.jks
 *.keystore
 marketing/instagram/out/
+!.bootstrap/record.json
