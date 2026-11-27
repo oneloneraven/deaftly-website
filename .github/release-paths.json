@@ -10,7 +10,8 @@
     "vitest.config.js",
     "e2e/",
     "wdio.conf.js",
-    "marketing/"
+    "marketing/",
+    ".bootstrap/record.json"
   ],
   "noneForbidden": ["infra/", "migrations/", "wrangler.jsonc"]
 }

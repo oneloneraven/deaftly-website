@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "modules": [
+    "core",
+    "js-toolchain",
+    "web-app",
+    "cloudflare-tofu-base",
+    "cloudflare-opentofu"
+  ],
+  "visibility": "public",
+  "flags": {
+    "beta": false
+  },
+  "skipped": {
+    "github:core:5-link": "user project can't link an org repo"
+  },
+  "exceptions": []
+}
